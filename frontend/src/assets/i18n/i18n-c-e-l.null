@@ -407,9 +407,9 @@
             'inscriptionFonction': 'Fonction',
 
         'Fonction': 'Fonction',
-            'inscriptionQuizNiveau': 'Quiz niveau',
+            'inscriptionQuiz': 'Quiz',
 
-        'Quiz niveau': 'Quiz niveau',
+        'Quiz': 'Quiz',
             'inscriptionNoteQuizNiveau': 'Note quiz niveau',
 
         'Note quiz niveau': 'Note quiz niveau',

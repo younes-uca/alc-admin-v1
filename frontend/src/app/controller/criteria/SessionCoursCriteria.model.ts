@@ -3,10 +3,10 @@ import {GroupeEtudiantCriteria} from './GroupeEtudiantCriteria.model';
 import {SectionCriteria} from './SectionCriteria.model';
 import {CoursCriteria} from './CoursCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class SessionCoursCriteria  extends BaseCriteria {
+
+export class SessionCoursCriteria  extends   BaseCriteria  {
 
     public id: number;
     public reference: string;

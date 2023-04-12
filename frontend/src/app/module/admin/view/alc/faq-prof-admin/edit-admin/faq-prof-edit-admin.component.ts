@@ -15,12 +15,12 @@ import {FaqProfDto} from 'src/app/controller/model/FaqProf.model';
 import {FaqProfCriteria} from 'src/app/controller/criteria/FaqProfCriteria.model';
 
 
+import {FaqTypeDto} from 'src/app/controller/model/FaqType.model';
+import {FaqTypeService} from 'src/app/controller/service/FaqType.service';
 import {AdminDto} from 'src/app/controller/model/Admin.model';
 import {AdminService} from 'src/app/controller/service/Admin.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfService} from 'src/app/controller/service/Prof.service';
-import {FaqTypeDto} from 'src/app/controller/model/FaqType.model';
-import {FaqTypeService} from 'src/app/controller/service/FaqType.service';
 
 @Component({
   selector: 'app-faq-prof-edit-admin',
@@ -39,7 +39,7 @@ export class FaqProfEditAdminComponent extends AbstractEditController<FaqProfDto
     constructor(private datePipe: DatePipe, private faqProfService: FaqProfService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private adminService: AdminService, private profService: ProfService, private faqTypeService: FaqTypeService
+, private faqTypeService: FaqTypeService, private adminService: AdminService, private profService: ProfService
     ) {
         super(datePipe, faqProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

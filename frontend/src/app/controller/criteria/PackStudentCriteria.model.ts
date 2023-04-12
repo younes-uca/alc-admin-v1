@@ -1,9 +1,9 @@
 import {ParcoursCriteria} from './ParcoursCriteria.model';
 import {PriceCriteria} from './PriceCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class PackStudentCriteria  extends BaseCriteria {
+
+export class PackStudentCriteria  extends   BaseCriteria  {
 
     public id: number;
      public nombreCours: number;

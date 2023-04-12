@@ -1,10 +1,10 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
 import {CentreCriteria} from './CentreCriteria.model';
 import {CoursCriteria} from './CoursCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ParcoursCriteria  extends BaseCriteria {
+
+export class ParcoursCriteria  extends   BaseCriteria  {
 
     public id: number;
     public datePublication: Date;

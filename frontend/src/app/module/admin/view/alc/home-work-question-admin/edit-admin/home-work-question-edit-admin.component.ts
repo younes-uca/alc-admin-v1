@@ -15,12 +15,12 @@ import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.mod
 import {HomeWorkQuestionCriteria} from 'src/app/controller/criteria/HomeWorkQuestionCriteria.model';
 
 
-import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
-import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
 import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
 import {HoweWorkQSTReponseDto} from 'src/app/controller/model/HoweWorkQSTReponse.model';
 import {HoweWorkQSTReponseService} from 'src/app/controller/service/HoweWorkQSTReponse.service';
+import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
+import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {EtatReponseDto} from 'src/app/controller/model/EtatReponse.model';
 import {EtatReponseService} from 'src/app/controller/service/EtatReponse.service';
 
@@ -46,7 +46,7 @@ export class HomeWorkQuestionEditAdminComponent extends AbstractEditController<H
     constructor(private datePipe: DatePipe, private homeWorkQuestionService: HomeWorkQuestionService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private typeDeQuestionService: TypeDeQuestionService, private homeWorkService: HomeWorkService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private etatReponseService: EtatReponseService
+, private homeWorkService: HomeWorkService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private typeDeQuestionService: TypeDeQuestionService, private etatReponseService: EtatReponseService
     ) {
         super(datePipe, homeWorkQuestionService, messageService, confirmationService, roleService, router, stringUtilService);
     }

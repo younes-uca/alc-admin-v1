@@ -1,10 +1,10 @@
 import {SalaryCriteria} from './SalaryCriteria.model';
 import {WorkloadBonusCriteria} from './WorkloadBonusCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class WorkloadBonusProfCriteria  extends BaseCriteria {
+
+export class WorkloadBonusProfCriteria  extends   BaseCriteria  {
 
     public id: number;
      public mois: number;

@@ -1,9 +1,9 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class CalendrierProfCriteria  extends BaseCriteria {
+
+export class CalendrierProfCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

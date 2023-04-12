@@ -15,24 +15,24 @@ import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
 import {HomeWorkCriteria} from 'src/app/controller/criteria/HomeWorkCriteria.model';
 
 
+import {ResultatHomeWorkDto} from 'src/app/controller/model/ResultatHomeWork.model';
+import {ResultatHomeWorkService} from 'src/app/controller/service/ResultatHomeWork.service';
+import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
+import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
+import {TypeHomeWorkDto} from 'src/app/controller/model/TypeHomeWork.model';
+import {TypeHomeWorkService} from 'src/app/controller/service/TypeHomeWork.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {HomeWorkEtudiantDto} from 'src/app/controller/model/HomeWorkEtudiant.model';
 import {HomeWorkEtudiantService} from 'src/app/controller/service/HomeWorkEtudiant.service';
 import {CoursDto} from 'src/app/controller/model/Cours.model';
 import {CoursService} from 'src/app/controller/service/Cours.service';
-import {ResultatHomeWorkDto} from 'src/app/controller/model/ResultatHomeWork.model';
-import {ResultatHomeWorkService} from 'src/app/controller/service/ResultatHomeWork.service';
-import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
-import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {HoweWorkQSTReponseDto} from 'src/app/controller/model/HoweWorkQSTReponse.model';
 import {HoweWorkQSTReponseService} from 'src/app/controller/service/HoweWorkQSTReponse.service';
-import {TypeHomeWorkDto} from 'src/app/controller/model/TypeHomeWork.model';
-import {TypeHomeWorkService} from 'src/app/controller/service/TypeHomeWork.service';
 import {ReponseEtudiantHomeWorkDto} from 'src/app/controller/model/ReponseEtudiantHomeWork.model';
 import {ReponseEtudiantHomeWorkService} from 'src/app/controller/service/ReponseEtudiantHomeWork.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
-import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
-import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
+import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
+import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 
 @Component({
   selector: 'app-home-work-edit-admin',
@@ -57,7 +57,7 @@ export class HomeWorkEditAdminComponent extends AbstractEditController<HomeWorkD
     constructor(private datePipe: DatePipe, private homeWorkService: HomeWorkService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private typeDeQuestionService: TypeDeQuestionService, private homeWorkEtudiantService: HomeWorkEtudiantService, private typeHomeWorkService: TypeHomeWorkService, private coursService: CoursService, private etudiantService: EtudiantService, private homeWorkQuestionService: HomeWorkQuestionService, private resultatHomeWorkService: ResultatHomeWorkService
+, private resultatHomeWorkService: ResultatHomeWorkService, private homeWorkQuestionService: HomeWorkQuestionService, private coursService: CoursService, private typeHomeWorkService: TypeHomeWorkService, private etudiantService: EtudiantService, private typeDeQuestionService: TypeDeQuestionService, private homeWorkEtudiantService: HomeWorkEtudiantService
     ) {
         super(datePipe, homeWorkService, messageService, confirmationService, roleService, router, stringUtilService);
     }

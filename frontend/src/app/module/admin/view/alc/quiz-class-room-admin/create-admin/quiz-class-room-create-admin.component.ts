@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {QuizClassRoomService} from 'src/app/controller/service/QuizClassRoom.service';
 import {QuizClassRoomDto} from 'src/app/controller/model/QuizClassRoom.model';
 import {QuizClassRoomCriteria} from 'src/app/controller/criteria/QuizClassRoomCriteria.model';
-import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
-import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
+import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 @Component({
   selector: 'app-quiz-class-room-create-admin',
   templateUrl: './quiz-class-room-create-admin.component.html'
@@ -32,7 +32,7 @@ export class QuizClassRoomCreateAdminComponent extends AbstractCreateController<
     constructor(private datePipe: DatePipe, private quizClassRoomService: QuizClassRoomService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private classRoomService: ClassRoomService, private quizService: QuizService
+, private quizService: QuizService, private classRoomService: ClassRoomService
     ) {
         super(datePipe, quizClassRoomService, messageService, confirmationService, roleService, router, stringUtilService);
     }

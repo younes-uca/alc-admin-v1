@@ -13,28 +13,28 @@ import {InscriptionService} from 'src/app/controller/service/Inscription.service
 import {InscriptionDto} from 'src/app/controller/model/Inscription.model';
 import {InscriptionCriteria} from 'src/app/controller/criteria/InscriptionCriteria.model';
 
-import {SkillDto} from 'src/app/controller/model/Skill.model';
-import {SkillService} from 'src/app/controller/service/Skill.service';
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
-import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
-import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
-import {FonctionDto} from 'src/app/controller/model/Fonction.model';
-import {FonctionService} from 'src/app/controller/service/Fonction.service';
-import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
-import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
-import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
-import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
-import {EtatInscriptionDto} from 'src/app/controller/model/EtatInscription.model';
-import {EtatInscriptionService} from 'src/app/controller/service/EtatInscription.service';
 import {StatutSocialDto} from 'src/app/controller/model/StatutSocial.model';
 import {StatutSocialService} from 'src/app/controller/service/StatutSocial.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
-import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
-import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
+import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
+import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
+import {EtatInscriptionDto} from 'src/app/controller/model/EtatInscription.model';
+import {EtatInscriptionService} from 'src/app/controller/service/EtatInscription.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
+import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
+import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
+import {SkillDto} from 'src/app/controller/model/Skill.model';
+import {SkillService} from 'src/app/controller/service/Skill.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {FonctionDto} from 'src/app/controller/model/Fonction.model';
+import {FonctionService} from 'src/app/controller/service/Fonction.service';
+import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
+import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
+import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
+import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
 @Component({
   selector: 'app-inscription-view-admin',
   templateUrl: './inscription-view-admin.component.html'
@@ -45,7 +45,7 @@ export class InscriptionViewAdminComponent extends AbstractViewController<Inscri
     constructor(private datePipe: DatePipe, private inscriptionService: InscriptionService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private skillService: SkillService, private parcoursService: ParcoursService, private groupeEtudeService: GroupeEtudeService, private fonctionService: FonctionService, private interetEtudiantService: InteretEtudiantService, private packStudentService: PackStudentService, private etatInscriptionService: EtatInscriptionService, private statutSocialService: StatutSocialService, private etudiantService: EtudiantService, private niveauEtudeService: NiveauEtudeService, private quizService: QuizService
+, private statutSocialService: StatutSocialService, private interetEtudiantService: InteretEtudiantService, private etatInscriptionService: EtatInscriptionService, private quizService: QuizService, private parcoursService: ParcoursService, private packStudentService: PackStudentService, private skillService: SkillService, private etudiantService: EtudiantService, private fonctionService: FonctionService, private niveauEtudeService: NiveauEtudeService, private groupeEtudeService: GroupeEtudeService
     ){
         super(datePipe, inscriptionService, messageService, roleService, router, stringUtilService);
     }
@@ -67,8 +67,8 @@ export class InscriptionViewAdminComponent extends AbstractViewController<Inscri
         this.niveauEtudeService.findAll().subscribe((data) => this.niveauEtudes = data);
         this.fonction = new FonctionDto();
         this.fonctionService.findAll().subscribe((data) => this.fonctions = data);
-        this.quizNiveau = new QuizNiveauDto();
-        this.quizNiveauService.findAll().subscribe((data) => this.quizNiveaus = data);
+        this.quiz = new QuizDto();
+        this.quizService.findAll().subscribe((data) => this.quizs = data);
         this.packStudent = new PackStudentDto();
         this.packStudentService.findAll().subscribe((data) => this.packStudents = data);
         this.skill = new SkillDto();
@@ -111,6 +111,18 @@ export class InscriptionViewAdminComponent extends AbstractViewController<Inscri
     }
     set niveauEtudes(value: Array<NiveauEtudeDto>) {
         this.niveauEtudeService.items = value;
+    }
+    get quiz(): QuizDto {
+       return this.quizService.item;
+    }
+    set quiz(value: QuizDto) {
+        this.quizService.item = value;
+    }
+    get quizs():Array<QuizDto> {
+       return this.quizService.items;
+    }
+    set quizs(value: Array<QuizDto>) {
+        this.quizService.items = value;
     }
     get parcours(): ParcoursDto {
        return this.parcoursService.item;
@@ -195,18 +207,6 @@ export class InscriptionViewAdminComponent extends AbstractViewController<Inscri
     }
     set groupeEtudes(value: Array<GroupeEtudeDto>) {
         this.groupeEtudeService.items = value;
-    }
-    get quizNiveau(): QuizDto {
-       return this.quizService.item;
-    }
-    set quizNiveau(value: QuizDto) {
-        this.quizService.item = value;
-    }
-    get quizNiveaus():Array<QuizDto> {
-       return this.quizService.items;
-    }
-    set quizNiveaus(value: Array<QuizDto>) {
-        this.quizService.items = value;
     }
 
 

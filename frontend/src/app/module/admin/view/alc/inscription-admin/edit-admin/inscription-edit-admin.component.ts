@@ -15,28 +15,28 @@ import {InscriptionDto} from 'src/app/controller/model/Inscription.model';
 import {InscriptionCriteria} from 'src/app/controller/criteria/InscriptionCriteria.model';
 
 
-import {SkillDto} from 'src/app/controller/model/Skill.model';
-import {SkillService} from 'src/app/controller/service/Skill.service';
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
-import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
-import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
-import {FonctionDto} from 'src/app/controller/model/Fonction.model';
-import {FonctionService} from 'src/app/controller/service/Fonction.service';
-import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
-import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
-import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
-import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
-import {EtatInscriptionDto} from 'src/app/controller/model/EtatInscription.model';
-import {EtatInscriptionService} from 'src/app/controller/service/EtatInscription.service';
 import {StatutSocialDto} from 'src/app/controller/model/StatutSocial.model';
 import {StatutSocialService} from 'src/app/controller/service/StatutSocial.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
-import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
-import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
+import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
+import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
+import {EtatInscriptionDto} from 'src/app/controller/model/EtatInscription.model';
+import {EtatInscriptionService} from 'src/app/controller/service/EtatInscription.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
+import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
+import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
+import {SkillDto} from 'src/app/controller/model/Skill.model';
+import {SkillService} from 'src/app/controller/service/Skill.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {FonctionDto} from 'src/app/controller/model/Fonction.model';
+import {FonctionService} from 'src/app/controller/service/Fonction.service';
+import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
+import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
+import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
+import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
 
 @Component({
   selector: 'app-inscription-edit-admin',
@@ -58,8 +58,8 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
     private _validNiveauEtudeCode = true;
     private _validFonctionCode = true;
     private _validFonctionLibelle = true;
-    private _validQuizNiveauRef = true;
-    private _validQuizNiveauLib = true;
+    private _validQuizRef = true;
+    private _validQuizLib = true;
     private _validPackStudentCode = true;
     private _validPackStudentLibelle = true;
     private _validSkillCode = true;
@@ -70,7 +70,7 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
     constructor(private datePipe: DatePipe, private inscriptionService: InscriptionService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private skillService: SkillService, private parcoursService: ParcoursService, private groupeEtudeService: GroupeEtudeService, private fonctionService: FonctionService, private interetEtudiantService: InteretEtudiantService, private packStudentService: PackStudentService, private etatInscriptionService: EtatInscriptionService, private statutSocialService: StatutSocialService, private etudiantService: EtudiantService, private niveauEtudeService: NiveauEtudeService, private quizService: QuizService
+, private statutSocialService: StatutSocialService, private interetEtudiantService: InteretEtudiantService, private etatInscriptionService: EtatInscriptionService, private quizService: QuizService, private parcoursService: ParcoursService, private packStudentService: PackStudentService, private skillService: SkillService, private etudiantService: EtudiantService, private fonctionService: FonctionService, private niveauEtudeService: NiveauEtudeService, private groupeEtudeService: GroupeEtudeService
     ) {
         super(datePipe, inscriptionService, messageService, confirmationService, roleService, router, stringUtilService);
     }
@@ -92,8 +92,8 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
     this.niveauEtudeService.findAll().subscribe((data) => this.niveauEtudes = data);
     this.fonction = new FonctionDto();
     this.fonctionService.findAll().subscribe((data) => this.fonctions = data);
-    this.quizNiveau = new QuizNiveauDto();
-    this.quizNiveauService.findAll().subscribe((data) => this.quizNiveaus = data);
+    this.quiz = new QuizDto();
+    this.quizService.findAll().subscribe((data) => this.quizs = data);
     this.packStudent = new PackStudentDto();
     this.packStudentService.findAll().subscribe((data) => this.packStudents = data);
     this.skill = new SkillDto();
@@ -135,6 +135,17 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
         if(isPermistted) {
              this.niveauEtude = new NiveauEtudeDto();
              this.createNiveauEtudeDialog = true;
+        }else{
+             this.messageService.add({
+                severity: 'error', summary: 'erreur', detail: 'problème de permission'
+            });
+        }
+    }
+   public async openCreateQuiz(quiz: string) {
+        const isPermistted = await this.roleService.isPermitted('Quiz', 'edit');
+        if(isPermistted) {
+             this.quiz = new QuizDto();
+             this.createQuizDialog = true;
         }else{
              this.messageService.add({
                 severity: 'error', summary: 'erreur', detail: 'problème de permission'
@@ -218,17 +229,6 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
             });
         }
     }
-   public async openCreateQuizNiveau(quizNiveau: string) {
-        const isPermistted = await this.roleService.isPermitted('Quiz', 'edit');
-        if(isPermistted) {
-             this.quizNiveau = new QuizDto();
-             this.createQuizNiveauDialog = true;
-        }else{
-             this.messageService.add({
-                severity: 'error', summary: 'erreur', detail: 'problème de permission'
-            });
-        }
-    }
 
    get packStudent(): PackStudentDto {
        return this.packStudentService.item;
@@ -283,6 +283,24 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
    }
   set createNiveauEtudeDialog(value: boolean) {
        this.niveauEtudeService.createDialog= value;
+   }
+   get quiz(): QuizDto {
+       return this.quizService.item;
+   }
+  set quiz(value: QuizDto) {
+        this.quizService.item = value;
+   }
+   get quizs(): Array<QuizDto> {
+        return this.quizService.items;
+   }
+   set quizs(value: Array<QuizDto>) {
+        this.quizService.items = value;
+   }
+   get createQuizDialog(): boolean {
+       return this.quizService.createDialog;
+   }
+  set createQuizDialog(value: boolean) {
+       this.quizService.createDialog= value;
    }
    get parcours(): ParcoursDto {
        return this.parcoursService.item;
@@ -410,24 +428,6 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
   set createGroupeEtudeDialog(value: boolean) {
        this.groupeEtudeService.createDialog= value;
    }
-   get quizNiveau(): QuizDto {
-       return this.quizService.item;
-   }
-  set quizNiveau(value: QuizDto) {
-        this.quizService.item = value;
-   }
-   get quizNiveaus(): Array<QuizDto> {
-        return this.quizService.items;
-   }
-   set quizNiveaus(value: Array<QuizDto>) {
-        this.quizService.items = value;
-   }
-   get createQuizNiveauDialog(): boolean {
-       return this.quizService.createDialog;
-   }
-  set createQuizNiveauDialog(value: boolean) {
-       this.quizService.createDialog= value;
-   }
 
 
 
@@ -503,17 +503,17 @@ export class InscriptionEditAdminComponent extends AbstractEditController<Inscri
     set validFonctionLibelle(value: boolean) {
         this._validFonctionLibelle = value;
     }
-    get validQuizNiveauRef(): boolean {
-        return this._validQuizNiveauRef;
+    get validQuizRef(): boolean {
+        return this._validQuizRef;
     }
-    set validQuizNiveauRef(value: boolean) {
-        this._validQuizNiveauRef = value;
+    set validQuizRef(value: boolean) {
+        this._validQuizRef = value;
     }
-    get validQuizNiveauLib(): boolean {
-        return this._validQuizNiveauLib;
+    get validQuizLib(): boolean {
+        return this._validQuizLib;
     }
-    set validQuizNiveauLib(value: boolean) {
-        this._validQuizNiveauLib = value;
+    set validQuizLib(value: boolean) {
+        this._validQuizLib = value;
     }
     get validPackStudentCode(): boolean {
         return this._validPackStudentCode;

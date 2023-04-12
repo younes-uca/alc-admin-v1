@@ -15,12 +15,12 @@ import {QuizEtudiantCriteria} from 'src/app/controller/criteria/QuizEtudiantCrit
 
 import {ReponseDto} from 'src/app/controller/model/Reponse.model';
 import {ReponseService} from 'src/app/controller/service/Reponse.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {ReponseEtudiantDto} from 'src/app/controller/model/ReponseEtudiant.model';
 import {ReponseEtudiantService} from 'src/app/controller/service/ReponseEtudiant.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {QuestionDto} from 'src/app/controller/model/Question.model';
 import {QuestionService} from 'src/app/controller/service/Question.service';
 @Component({
@@ -35,7 +35,7 @@ export class QuizEtudiantViewAdminComponent extends AbstractViewController<QuizE
     constructor(private datePipe: DatePipe, private quizEtudiantService: QuizEtudiantService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private reponseService: ReponseService, private etudiantService: EtudiantService, private reponseEtudiantService: ReponseEtudiantService, private quizService: QuizService, private questionService: QuestionService
+, private reponseService: ReponseService, private reponseEtudiantService: ReponseEtudiantService, private quizService: QuizService, private etudiantService: EtudiantService, private questionService: QuestionService
     ){
         super(datePipe, quizEtudiantService, messageService, roleService, router, stringUtilService);
     }

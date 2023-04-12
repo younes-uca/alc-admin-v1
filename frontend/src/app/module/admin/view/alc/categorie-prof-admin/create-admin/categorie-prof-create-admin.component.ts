@@ -13,18 +13,18 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {CategorieProfService} from 'src/app/controller/service/CategorieProf.service';
 import {CategorieProfDto} from 'src/app/controller/model/CategorieProf.model';
 import {CategorieProfCriteria} from 'src/app/controller/criteria/CategorieProfCriteria.model';
-import {TypeTeacherDto} from 'src/app/controller/model/TypeTeacher.model';
-import {TypeTeacherService} from 'src/app/controller/service/TypeTeacher.service';
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
-import {ProfDto} from 'src/app/controller/model/Prof.model';
-import {ProfService} from 'src/app/controller/service/Prof.service';
-import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
-import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
-import {TrancheHoraireProfDto} from 'src/app/controller/model/TrancheHoraireProf.model';
-import {TrancheHoraireProfService} from 'src/app/controller/service/TrancheHoraireProf.service';
 import {RecommendTeacherDto} from 'src/app/controller/model/RecommendTeacher.model';
 import {RecommendTeacherService} from 'src/app/controller/service/RecommendTeacher.service';
+import {TrancheHoraireProfDto} from 'src/app/controller/model/TrancheHoraireProf.model';
+import {TrancheHoraireProfService} from 'src/app/controller/service/TrancheHoraireProf.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
+import {TypeTeacherDto} from 'src/app/controller/model/TypeTeacher.model';
+import {TypeTeacherService} from 'src/app/controller/service/TypeTeacher.service';
+import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
+import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
+import {ProfDto} from 'src/app/controller/model/Prof.model';
+import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
   selector: 'app-categorie-prof-create-admin',
   templateUrl: './categorie-prof-create-admin.component.html'
@@ -40,7 +40,7 @@ export class CategorieProfCreateAdminComponent extends AbstractCreateController<
     constructor(private datePipe: DatePipe, private categorieProfService: CategorieProfService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private typeTeacherService: TypeTeacherService, private parcoursService: ParcoursService, private profService: ProfService
+, private parcoursService: ParcoursService, private typeTeacherService: TypeTeacherService, private profService: ProfService
     ) {
         super(datePipe, categorieProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

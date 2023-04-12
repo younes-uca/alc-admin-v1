@@ -1,8 +1,8 @@
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class TrancheHoraireProfCriteria  extends BaseCriteria {
+
+export class TrancheHoraireProfCriteria  extends   BaseCriteria  {
 
     public id: number;
     public startHour: string;

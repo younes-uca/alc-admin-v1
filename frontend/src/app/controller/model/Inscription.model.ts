@@ -38,7 +38,7 @@ export class InscriptionDto  extends BaseDto{
     public interetEtudiant: InteretEtudiantDto ;
     public niveauEtude: NiveauEtudeDto ;
     public fonction: FonctionDto ;
-    public quizNiveau: QuizDto ;
+    public quiz: QuizDto ;
     public packStudent: PackStudentDto ;
     public skill: SkillDto ;
 

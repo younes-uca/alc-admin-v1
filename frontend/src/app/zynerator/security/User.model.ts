@@ -1,10 +1,11 @@
-export class User {
+import {BaseDto} from '../dto/BaseDto.model';
+
+export class User extends BaseDto{
     public credentialsNonExpired: boolean;
     public enabled: boolean;
     public email: string;
     public accountNonExpired: boolean;
     public accountNonLocked: boolean;
-    public id: string;
     public prenom: string;
     public nom: string;
     public username: string;

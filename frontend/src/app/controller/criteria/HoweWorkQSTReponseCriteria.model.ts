@@ -1,9 +1,9 @@
 import {EtatReponseCriteria} from './EtatReponseCriteria.model';
 import {HomeWorkQuestionCriteria} from './HomeWorkQuestionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class HoweWorkQSTReponseCriteria  extends BaseCriteria {
+
+export class HoweWorkQSTReponseCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

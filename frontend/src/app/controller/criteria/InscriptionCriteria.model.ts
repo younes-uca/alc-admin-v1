@@ -9,10 +9,10 @@ import {StatutSocialCriteria} from './StatutSocialCriteria.model';
 import {PackStudentCriteria} from './PackStudentCriteria.model';
 import {GroupeEtudeCriteria} from './GroupeEtudeCriteria.model';
 import {NiveauEtudeCriteria} from './NiveauEtudeCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class InscriptionCriteria  extends BaseCriteria {
+
+export class InscriptionCriteria  extends   BaseCriteria  {
 
     public id: number;
      public numeroInscription: number;
@@ -40,7 +40,7 @@ export class InscriptionCriteria  extends BaseCriteria {
   public interetEtudiant: InteretEtudiantCriteria ;
   public niveauEtude: NiveauEtudeCriteria ;
   public fonction: FonctionCriteria ;
-  public quizNiveau: QuizCriteria ;
+  public quiz: QuizCriteria ;
   public packStudent: PackStudentCriteria ;
   public skill: SkillCriteria ;
 

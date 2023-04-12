@@ -1,8 +1,8 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class DictionaryCriteria  extends BaseCriteria {
+
+export class DictionaryCriteria  extends   BaseCriteria  {
 
     public id: number;
     public word: string;

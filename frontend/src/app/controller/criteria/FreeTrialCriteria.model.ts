@@ -7,10 +7,10 @@ import {FreeTrialDetailCriteria} from './FreeTrialDetailCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
 import {NiveauEtudeCriteria} from './NiveauEtudeCriteria.model';
 import {FreeTrialStudentWhatsTemplateCriteria} from './FreeTrialStudentWhatsTemplateCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FreeTrialCriteria  extends BaseCriteria {
+
+export class FreeTrialCriteria  extends   BaseCriteria  {
 
     public id: number;
     public reference: string;

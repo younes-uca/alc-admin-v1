@@ -1,8 +1,8 @@
 import {SectionCriteria} from './SectionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class SectionItemCriteria  extends BaseCriteria {
+
+export class SectionItemCriteria  extends   BaseCriteria  {
 
     public id: number;
     public imageUrl: string;

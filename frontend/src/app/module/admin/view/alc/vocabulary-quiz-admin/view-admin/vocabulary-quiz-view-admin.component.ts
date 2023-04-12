@@ -13,10 +13,10 @@ import {VocabularyQuizService} from 'src/app/controller/service/VocabularyQuiz.s
 import {VocabularyQuizDto} from 'src/app/controller/model/VocabularyQuiz.model';
 import {VocabularyQuizCriteria} from 'src/app/controller/criteria/VocabularyQuizCriteria.model';
 
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
 import {VocabularyDto} from 'src/app/controller/model/Vocabulary.model';
 import {VocabularyService} from 'src/app/controller/service/Vocabulary.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
 @Component({
   selector: 'app-vocabulary-quiz-view-admin',
   templateUrl: './vocabulary-quiz-view-admin.component.html'
@@ -29,7 +29,7 @@ export class VocabularyQuizViewAdminComponent extends AbstractViewController<Voc
     constructor(private datePipe: DatePipe, private vocabularyQuizService: VocabularyQuizService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private sectionService: SectionService, private vocabularyService: VocabularyService
+, private vocabularyService: VocabularyService, private sectionService: SectionService
     ){
         super(datePipe, vocabularyQuizService, messageService, roleService, router, stringUtilService);
     }

@@ -1,8 +1,8 @@
 import {ParcoursCriteria} from './ParcoursCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class CentreCriteria  extends BaseCriteria {
+
+export class CentreCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

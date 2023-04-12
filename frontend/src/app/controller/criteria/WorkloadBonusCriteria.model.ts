@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class WorkloadBonusCriteria  extends BaseCriteria {
+
+export class WorkloadBonusCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

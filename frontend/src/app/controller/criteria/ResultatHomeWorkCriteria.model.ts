@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ResultatHomeWorkCriteria  extends BaseCriteria {
+
+export class ResultatHomeWorkCriteria  extends   BaseCriteria  {
 
     public id: number;
     public libelle: string;

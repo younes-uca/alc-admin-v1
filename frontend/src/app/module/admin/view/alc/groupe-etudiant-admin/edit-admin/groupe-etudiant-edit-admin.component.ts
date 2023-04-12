@@ -19,10 +19,10 @@ import {GroupeEtudiantDetailDto} from 'src/app/controller/model/GroupeEtudiantDe
 import {GroupeEtudiantDetailService} from 'src/app/controller/service/GroupeEtudiantDetail.service';
 import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
 import {ParcoursService} from 'src/app/controller/service/Parcours.service';
-import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
-import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
+import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfService} from 'src/app/controller/service/Prof.service';
 
@@ -46,7 +46,7 @@ export class GroupeEtudiantEditAdminComponent extends AbstractEditController<Gro
     constructor(private datePipe: DatePipe, private groupeEtudiantService: GroupeEtudiantService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private groupeEtudiantDetailService: GroupeEtudiantDetailService, private parcoursService: ParcoursService, private groupeEtudeService: GroupeEtudeService, private etudiantService: EtudiantService, private profService: ProfService
+, private groupeEtudiantDetailService: GroupeEtudiantDetailService, private parcoursService: ParcoursService, private etudiantService: EtudiantService, private groupeEtudeService: GroupeEtudeService, private profService: ProfService
     ) {
         super(datePipe, groupeEtudiantService, messageService, confirmationService, roleService, router, stringUtilService);
     }

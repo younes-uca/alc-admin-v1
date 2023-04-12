@@ -4,11 +4,10 @@ import {RecommendTeacherCriteria} from './RecommendTeacherCriteria.model';
 import {CategorieProfCriteria} from './CategorieProfCriteria.model';
 import {TrancheHoraireProfCriteria} from './TrancheHoraireProfCriteria.model';
 import {ClassRoomCriteria} from './ClassRoomCriteria.model';
-//import {User} from './User.model';
+import {User} from 'src/app/zynerator/security/User.model';
 
-import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ProfCriteria  extends BaseCriteria  //extends User{
+export class ProfCriteria  extends    User {
 
     public ref: string;
     public refLike: string;

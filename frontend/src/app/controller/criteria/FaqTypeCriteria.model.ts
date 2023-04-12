@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FaqTypeCriteria  extends BaseCriteria {
+
+export class FaqTypeCriteria  extends   BaseCriteria  {
 
     public id: number;
     public destinataire: string;

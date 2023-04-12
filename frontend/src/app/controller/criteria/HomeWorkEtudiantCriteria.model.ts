@@ -2,10 +2,10 @@ import {EtudiantCriteria} from './EtudiantCriteria.model';
 import {ReponseEtudiantHomeWorkCriteria} from './ReponseEtudiantHomeWorkCriteria.model';
 import {ResultatHomeWorkCriteria} from './ResultatHomeWorkCriteria.model';
 import {HomeWorkCriteria} from './HomeWorkCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class HomeWorkEtudiantCriteria  extends BaseCriteria {
+
+export class HomeWorkEtudiantCriteria  extends   BaseCriteria  {
 
     public id: number;
      public note: number;

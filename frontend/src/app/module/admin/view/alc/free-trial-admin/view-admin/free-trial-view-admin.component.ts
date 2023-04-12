@@ -13,26 +13,26 @@ import {FreeTrialService} from 'src/app/controller/service/FreeTrial.service';
 import {FreeTrialDto} from 'src/app/controller/model/FreeTrial.model';
 import {FreeTrialCriteria} from 'src/app/controller/criteria/FreeTrialCriteria.model';
 
-import {ProfDto} from 'src/app/controller/model/Prof.model';
-import {ProfService} from 'src/app/controller/service/Prof.service';
-import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
-import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
 import {FreeTrialStudentEmailTemplateDto} from 'src/app/controller/model/FreeTrialStudentEmailTemplate.model';
 import {FreeTrialStudentEmailTemplateService} from 'src/app/controller/service/FreeTrialStudentEmailTemplate.service';
-import {FreeTrialTeacherEmailTemplateDto} from 'src/app/controller/model/FreeTrialTeacherEmailTemplate.model';
-import {FreeTrialTeacherEmailTemplateService} from 'src/app/controller/service/FreeTrialTeacherEmailTemplate.service';
-import {FreeTrialTeacherWhatsTemplateDto} from 'src/app/controller/model/FreeTrialTeacherWhatsTemplate.model';
-import {FreeTrialTeacherWhatsTemplateService} from 'src/app/controller/service/FreeTrialTeacherWhatsTemplate.service';
 import {FreeTrialConfigurationDto} from 'src/app/controller/model/FreeTrialConfiguration.model';
 import {FreeTrialConfigurationService} from 'src/app/controller/service/FreeTrialConfiguration.service';
-import {FreeTrialDetailDto} from 'src/app/controller/model/FreeTrialDetail.model';
-import {FreeTrialDetailService} from 'src/app/controller/service/FreeTrialDetail.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
-import {FreeTrialStudentWhatsTemplateDto} from 'src/app/controller/model/FreeTrialStudentWhatsTemplate.model';
-import {FreeTrialStudentWhatsTemplateService} from 'src/app/controller/service/FreeTrialStudentWhatsTemplate.service';
+import {FreeTrialTeacherEmailTemplateDto} from 'src/app/controller/model/FreeTrialTeacherEmailTemplate.model';
+import {FreeTrialTeacherEmailTemplateService} from 'src/app/controller/service/FreeTrialTeacherEmailTemplate.service';
+import {FreeTrialDetailDto} from 'src/app/controller/model/FreeTrialDetail.model';
+import {FreeTrialDetailService} from 'src/app/controller/service/FreeTrialDetail.service';
 import {StatutFreeTrialDto} from 'src/app/controller/model/StatutFreeTrial.model';
 import {StatutFreeTrialService} from 'src/app/controller/service/StatutFreeTrial.service';
+import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
+import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
+import {FreeTrialStudentWhatsTemplateDto} from 'src/app/controller/model/FreeTrialStudentWhatsTemplate.model';
+import {FreeTrialStudentWhatsTemplateService} from 'src/app/controller/service/FreeTrialStudentWhatsTemplate.service';
+import {FreeTrialTeacherWhatsTemplateDto} from 'src/app/controller/model/FreeTrialTeacherWhatsTemplate.model';
+import {FreeTrialTeacherWhatsTemplateService} from 'src/app/controller/service/FreeTrialTeacherWhatsTemplate.service';
+import {ProfDto} from 'src/app/controller/model/Prof.model';
+import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
   selector: 'app-free-trial-view-admin',
   templateUrl: './free-trial-view-admin.component.html'
@@ -45,7 +45,7 @@ export class FreeTrialViewAdminComponent extends AbstractViewController<FreeTria
     constructor(private datePipe: DatePipe, private freeTrialService: FreeTrialService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private freeTrialTeacherWhatsTemplateService: FreeTrialTeacherWhatsTemplateService, private freeTrialConfigurationService: FreeTrialConfigurationService, private freeTrialDetailService: FreeTrialDetailService, private profService: ProfService, private niveauEtudeService: NiveauEtudeService, private etudiantService: EtudiantService, private freeTrialStudentWhatsTemplateService: FreeTrialStudentWhatsTemplateService, private statutFreeTrialService: StatutFreeTrialService, private freeTrialStudentEmailTemplateService: FreeTrialStudentEmailTemplateService, private freeTrialTeacherEmailTemplateService: FreeTrialTeacherEmailTemplateService
+, private freeTrialDetailService: FreeTrialDetailService, private freeTrialStudentEmailTemplateService: FreeTrialStudentEmailTemplateService, private freeTrialConfigurationService: FreeTrialConfigurationService, private statutFreeTrialService: StatutFreeTrialService, private etudiantService: EtudiantService, private niveauEtudeService: NiveauEtudeService, private freeTrialStudentWhatsTemplateService: FreeTrialStudentWhatsTemplateService, private freeTrialTeacherEmailTemplateService: FreeTrialTeacherEmailTemplateService, private freeTrialTeacherWhatsTemplateService: FreeTrialTeacherWhatsTemplateService, private profService: ProfService
     ){
         super(datePipe, freeTrialService, messageService, roleService, router, stringUtilService);
     }

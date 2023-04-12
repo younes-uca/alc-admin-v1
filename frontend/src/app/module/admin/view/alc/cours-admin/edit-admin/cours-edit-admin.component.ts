@@ -15,26 +15,26 @@ import {CoursDto} from 'src/app/controller/model/Cours.model';
 import {CoursCriteria} from 'src/app/controller/criteria/CoursCriteria.model';
 
 
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
 import {SessionCoursDto} from 'src/app/controller/model/SessionCours.model';
 import {SessionCoursService} from 'src/app/controller/service/SessionCours.service';
-import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
-import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
-import {EtatCoursDto} from 'src/app/controller/model/EtatCours.model';
-import {EtatCoursService} from 'src/app/controller/service/EtatCours.service';
-import {HomeWorkEtudiantDto} from 'src/app/controller/model/HomeWorkEtudiant.model';
-import {HomeWorkEtudiantService} from 'src/app/controller/service/HomeWorkEtudiant.service';
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
-import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
-import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
 import {SectionItemDto} from 'src/app/controller/model/SectionItem.model';
 import {SectionItemService} from 'src/app/controller/service/SectionItem.service';
-import {TypeHomeWorkDto} from 'src/app/controller/model/TypeHomeWork.model';
-import {TypeHomeWorkService} from 'src/app/controller/service/TypeHomeWork.service';
+import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
+import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
 import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
 import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
+import {TypeHomeWorkDto} from 'src/app/controller/model/TypeHomeWork.model';
+import {TypeHomeWorkService} from 'src/app/controller/service/TypeHomeWork.service';
+import {HomeWorkEtudiantDto} from 'src/app/controller/model/HomeWorkEtudiant.model';
+import {HomeWorkEtudiantService} from 'src/app/controller/service/HomeWorkEtudiant.service';
+import {EtatCoursDto} from 'src/app/controller/model/EtatCours.model';
+import {EtatCoursService} from 'src/app/controller/service/EtatCours.service';
+import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
+import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
 
 @Component({
   selector: 'app-cours-edit-admin',
@@ -60,7 +60,7 @@ export class CoursEditAdminComponent extends AbstractEditController<CoursDto, Co
     constructor(private datePipe: DatePipe, private coursService: CoursService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private categorieSectionService: CategorieSectionService, private etatCoursService: EtatCoursService, private parcoursService: ParcoursService, private sectionService: SectionService, private homeWorkService: HomeWorkService, private typeHomeWorkService: TypeHomeWorkService, private sessionCoursService: SessionCoursService
+, private homeWorkService: HomeWorkService, private sessionCoursService: SessionCoursService, private sectionService: SectionService, private typeHomeWorkService: TypeHomeWorkService, private parcoursService: ParcoursService, private etatCoursService: EtatCoursService, private categorieSectionService: CategorieSectionService
     ) {
         super(datePipe, coursService, messageService, confirmationService, roleService, router, stringUtilService);
     }

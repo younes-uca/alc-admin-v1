@@ -1,8 +1,8 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class InviteStudentCriteria  extends BaseCriteria {
+
+export class InviteStudentCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class LangueCriteria  extends BaseCriteria {
+
+export class LangueCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

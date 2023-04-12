@@ -13,12 +13,12 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {FaqEtudiantService} from 'src/app/controller/service/FaqEtudiant.service';
 import {FaqEtudiantDto} from 'src/app/controller/model/FaqEtudiant.model';
 import {FaqEtudiantCriteria} from 'src/app/controller/criteria/FaqEtudiantCriteria.model';
-import {AdminDto} from 'src/app/controller/model/Admin.model';
-import {AdminService} from 'src/app/controller/service/Admin.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {FaqTypeDto} from 'src/app/controller/model/FaqType.model';
 import {FaqTypeService} from 'src/app/controller/service/FaqType.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {AdminDto} from 'src/app/controller/model/Admin.model';
+import {AdminService} from 'src/app/controller/service/Admin.service';
 @Component({
   selector: 'app-faq-etudiant-create-admin',
   templateUrl: './faq-etudiant-create-admin.component.html'
@@ -34,7 +34,7 @@ export class FaqEtudiantCreateAdminComponent extends AbstractCreateController<Fa
     constructor(private datePipe: DatePipe, private faqEtudiantService: FaqEtudiantService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private adminService: AdminService, private etudiantService: EtudiantService, private faqTypeService: FaqTypeService
+, private faqTypeService: FaqTypeService, private etudiantService: EtudiantService, private adminService: AdminService
     ) {
         super(datePipe, faqEtudiantService, messageService, confirmationService, roleService, router, stringUtilService);
     }

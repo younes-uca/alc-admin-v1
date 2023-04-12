@@ -1,8 +1,8 @@
 import {CategorieSectionCriteria} from './CategorieSectionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class SuperCategorieSectionCriteria  extends BaseCriteria {
+
+export class SuperCategorieSectionCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

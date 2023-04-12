@@ -1,10 +1,10 @@
 import {EtudiantClassRoomCriteria} from './EtudiantClassRoomCriteria.model';
 import {QuizClassRoomCriteria} from './QuizClassRoomCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ClassRoomCriteria  extends BaseCriteria {
+
+export class ClassRoomCriteria  extends   BaseCriteria  {
 
     public id: number;
     public libelle: string;

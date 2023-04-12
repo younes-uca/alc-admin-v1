@@ -1,9 +1,9 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
 import {FreeTrialCriteria} from './FreeTrialCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FreeTrialDetailCriteria  extends BaseCriteria {
+
+export class FreeTrialDetailCriteria  extends   BaseCriteria  {
 
     public id: number;
     public presence: null | boolean;

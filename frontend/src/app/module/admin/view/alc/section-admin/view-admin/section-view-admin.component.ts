@@ -13,14 +13,14 @@ import {SectionService} from 'src/app/controller/service/Section.service';
 import {SectionDto} from 'src/app/controller/model/Section.model';
 import {SectionCriteria} from 'src/app/controller/criteria/SectionCriteria.model';
 
-import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
-import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
-import {SectionItemDto} from 'src/app/controller/model/SectionItem.model';
-import {SectionItemService} from 'src/app/controller/service/SectionItem.service';
 import {CoursDto} from 'src/app/controller/model/Cours.model';
 import {CoursService} from 'src/app/controller/service/Cours.service';
 import {SessionCoursDto} from 'src/app/controller/model/SessionCours.model';
 import {SessionCoursService} from 'src/app/controller/service/SessionCours.service';
+import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
+import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
+import {SectionItemDto} from 'src/app/controller/model/SectionItem.model';
+import {SectionItemService} from 'src/app/controller/service/SectionItem.service';
 @Component({
   selector: 'app-section-view-admin',
   templateUrl: './section-view-admin.component.html'
@@ -33,7 +33,7 @@ export class SectionViewAdminComponent extends AbstractViewController<SectionDto
     constructor(private datePipe: DatePipe, private sectionService: SectionService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private categorieSectionService: CategorieSectionService, private sectionItemService: SectionItemService, private coursService: CoursService, private sessionCoursService: SessionCoursService
+, private coursService: CoursService, private sessionCoursService: SessionCoursService, private categorieSectionService: CategorieSectionService, private sectionItemService: SectionItemService
     ){
         super(datePipe, sectionService, messageService, roleService, router, stringUtilService);
     }

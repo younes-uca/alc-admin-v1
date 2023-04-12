@@ -15,10 +15,10 @@ import {FreeTrialDetailDto} from 'src/app/controller/model/FreeTrialDetail.model
 import {FreeTrialDetailCriteria} from 'src/app/controller/criteria/FreeTrialDetailCriteria.model';
 
 
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {FreeTrialDto} from 'src/app/controller/model/FreeTrial.model';
 import {FreeTrialService} from 'src/app/controller/service/FreeTrial.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 
 @Component({
   selector: 'app-free-trial-detail-edit-admin',
@@ -36,7 +36,7 @@ export class FreeTrialDetailEditAdminComponent extends AbstractEditController<Fr
     constructor(private datePipe: DatePipe, private freeTrialDetailService: FreeTrialDetailService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private etudiantService: EtudiantService, private freeTrialService: FreeTrialService
+, private freeTrialService: FreeTrialService, private etudiantService: EtudiantService
     ) {
         super(datePipe, freeTrialDetailService, messageService, confirmationService, roleService, router, stringUtilService);
     }

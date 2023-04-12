@@ -1,8 +1,7 @@
-//import {User} from './User.model';
+import {User} from 'src/app/zynerator/security/User.model';
 
-import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class AdminCriteria  extends BaseCriteria  //extends User{
+export class AdminCriteria  extends    User {
 
     public description: string;
     public descriptionLike: string;

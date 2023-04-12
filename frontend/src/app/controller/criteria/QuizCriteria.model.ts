@@ -1,10 +1,10 @@
 import {QuizEtudiantCriteria} from './QuizEtudiantCriteria.model';
 import {QuestionCriteria} from './QuestionCriteria.model';
 import {SectionCriteria} from './SectionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class QuizCriteria  extends BaseCriteria {
+
+export class QuizCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

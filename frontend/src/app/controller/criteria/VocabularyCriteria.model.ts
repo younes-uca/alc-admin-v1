@@ -1,9 +1,9 @@
 import {VocabularyQuizCriteria} from './VocabularyQuizCriteria.model';
 import {SectionCriteria} from './SectionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class VocabularyCriteria  extends BaseCriteria {
+
+export class VocabularyCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FreeTrialStudentWhatsTemplateCriteria  extends BaseCriteria {
+
+export class FreeTrialStudentWhatsTemplateCriteria  extends   BaseCriteria  {
 
     public id: number;
     public object: string;

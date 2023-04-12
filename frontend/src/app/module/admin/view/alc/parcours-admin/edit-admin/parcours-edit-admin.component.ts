@@ -15,44 +15,44 @@ import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
 import {ParcoursCriteria} from 'src/app/controller/criteria/ParcoursCriteria.model';
 
 
-import {SkillDto} from 'src/app/controller/model/Skill.model';
-import {SkillService} from 'src/app/controller/service/Skill.service';
 import {StatutSocialDto} from 'src/app/controller/model/StatutSocial.model';
 import {StatutSocialService} from 'src/app/controller/service/StatutSocial.service';
-import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
-import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
-import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
-import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
-import {EtatEtudiantScheduleDto} from 'src/app/controller/model/EtatEtudiantSchedule.model';
-import {EtatEtudiantScheduleService} from 'src/app/controller/service/EtatEtudiantSchedule.service';
-import {TeacherLocalityDto} from 'src/app/controller/model/TeacherLocality.model';
-import {TeacherLocalityService} from 'src/app/controller/service/TeacherLocality.service';
-import {EtatCoursDto} from 'src/app/controller/model/EtatCours.model';
-import {EtatCoursService} from 'src/app/controller/service/EtatCours.service';
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
-import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
-import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
-import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
-import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
-import {CoursDto} from 'src/app/controller/model/Cours.model';
-import {CoursService} from 'src/app/controller/service/Cours.service';
-import {GroupeEtudiantDto} from 'src/app/controller/model/GroupeEtudiant.model';
-import {GroupeEtudiantService} from 'src/app/controller/service/GroupeEtudiant.service';
-import {GroupeEtudiantDetailDto} from 'src/app/controller/model/GroupeEtudiantDetail.model';
-import {GroupeEtudiantDetailService} from 'src/app/controller/service/GroupeEtudiantDetail.service';
-import {FonctionDto} from 'src/app/controller/model/Fonction.model';
-import {FonctionService} from 'src/app/controller/service/Fonction.service';
 import {LangueDto} from 'src/app/controller/model/Langue.model';
 import {LangueService} from 'src/app/controller/service/Langue.service';
-import {CentreDto} from 'src/app/controller/model/Centre.model';
-import {CentreService} from 'src/app/controller/service/Centre.service';
-import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
-import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
+import {GroupeEtudiantDetailDto} from 'src/app/controller/model/GroupeEtudiantDetail.model';
+import {GroupeEtudiantDetailService} from 'src/app/controller/service/GroupeEtudiantDetail.service';
 import {QuizEtudiantDto} from 'src/app/controller/model/QuizEtudiant.model';
 import {QuizEtudiantService} from 'src/app/controller/service/QuizEtudiant.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {TeacherLocalityDto} from 'src/app/controller/model/TeacherLocality.model';
+import {TeacherLocalityService} from 'src/app/controller/service/TeacherLocality.service';
+import {CoursDto} from 'src/app/controller/model/Cours.model';
+import {CoursService} from 'src/app/controller/service/Cours.service';
+import {PackStudentDto} from 'src/app/controller/model/PackStudent.model';
+import {PackStudentService} from 'src/app/controller/service/PackStudent.service';
+import {EtatEtudiantScheduleDto} from 'src/app/controller/model/EtatEtudiantSchedule.model';
+import {EtatEtudiantScheduleService} from 'src/app/controller/service/EtatEtudiantSchedule.service';
+import {GroupeEtudeDto} from 'src/app/controller/model/GroupeEtude.model';
+import {GroupeEtudeService} from 'src/app/controller/service/GroupeEtude.service';
+import {SkillDto} from 'src/app/controller/model/Skill.model';
+import {SkillService} from 'src/app/controller/service/Skill.service';
+import {GroupeEtudiantDto} from 'src/app/controller/model/GroupeEtudiant.model';
+import {GroupeEtudiantService} from 'src/app/controller/service/GroupeEtudiant.service';
+import {CentreDto} from 'src/app/controller/model/Centre.model';
+import {CentreService} from 'src/app/controller/service/Centre.service';
+import {EtatCoursDto} from 'src/app/controller/model/EtatCours.model';
+import {EtatCoursService} from 'src/app/controller/service/EtatCours.service';
+import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
+import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
+import {InteretEtudiantDto} from 'src/app/controller/model/InteretEtudiant.model';
+import {InteretEtudiantService} from 'src/app/controller/service/InteretEtudiant.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
+import {FonctionDto} from 'src/app/controller/model/Fonction.model';
+import {FonctionService} from 'src/app/controller/service/Fonction.service';
+import {NiveauEtudeDto} from 'src/app/controller/model/NiveauEtude.model';
+import {NiveauEtudeService} from 'src/app/controller/service/NiveauEtude.service';
 
 @Component({
   selector: 'app-parcours-edit-admin',
@@ -77,7 +77,7 @@ export class ParcoursEditAdminComponent extends AbstractEditController<ParcoursD
     constructor(private datePipe: DatePipe, private parcoursService: ParcoursService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private teacherLocalityService: TeacherLocalityService, private skillService: SkillService, private etatCoursService: EtatCoursService, private packStudentService: PackStudentService, private coursService: CoursService, private statutSocialService: StatutSocialService, private niveauEtudeService: NiveauEtudeService, private groupeEtudiantService: GroupeEtudiantService, private groupeEtudeService: GroupeEtudeService, private etatEtudiantScheduleService: EtatEtudiantScheduleService, private fonctionService: FonctionService, private langueService: LangueService, private centreService: CentreService, private interetEtudiantService: InteretEtudiantService, private etudiantService: EtudiantService
+, private statutSocialService: StatutSocialService, private langueService: LangueService, private groupeEtudiantService: GroupeEtudiantService, private skillService: SkillService, private etudiantService: EtudiantService, private centreService: CentreService, private etatCoursService: EtatCoursService, private interetEtudiantService: InteretEtudiantService, private teacherLocalityService: TeacherLocalityService, private coursService: CoursService, private packStudentService: PackStudentService, private fonctionService: FonctionService, private etatEtudiantScheduleService: EtatEtudiantScheduleService, private niveauEtudeService: NiveauEtudeService, private groupeEtudeService: GroupeEtudeService
     ) {
         super(datePipe, parcoursService, messageService, confirmationService, roleService, router, stringUtilService);
     }

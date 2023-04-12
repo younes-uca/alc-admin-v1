@@ -13,10 +13,10 @@ import {CentreService} from 'src/app/controller/service/Centre.service';
 import {CentreDto} from 'src/app/controller/model/Centre.model';
 import {CentreCriteria} from 'src/app/controller/criteria/CentreCriteria.model';
 
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
 import {CoursDto} from 'src/app/controller/model/Cours.model';
 import {CoursService} from 'src/app/controller/service/Cours.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 @Component({

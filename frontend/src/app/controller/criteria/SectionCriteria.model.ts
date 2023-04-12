@@ -2,10 +2,10 @@ import {SessionCoursCriteria} from './SessionCoursCriteria.model';
 import {CategorieSectionCriteria} from './CategorieSectionCriteria.model';
 import {CoursCriteria} from './CoursCriteria.model';
 import {SectionItemCriteria} from './SectionItemCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class SectionCriteria  extends BaseCriteria {
+
+export class SectionCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

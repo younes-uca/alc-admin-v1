@@ -1,10 +1,10 @@
 import {GroupeEtudiantCriteria} from './GroupeEtudiantCriteria.model';
 import {CoursCriteria} from './CoursCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ScheduleProfCriteria  extends BaseCriteria {
+
+export class ScheduleProfCriteria  extends   BaseCriteria  {
 
     public id: number;
     public subject: string;

@@ -1,8 +1,8 @@
 import {TypeReclamationEtudiantCriteria} from './TypeReclamationEtudiantCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ReclamationEtudiantCriteria  extends BaseCriteria {
+
+export class ReclamationEtudiantCriteria  extends   BaseCriteria  {
 
     public id: number;
     public reference: string;

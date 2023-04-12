@@ -11,10 +11,10 @@ import {PackStudentCriteria} from './PackStudentCriteria.model';
 import {GroupeEtudiantDetailCriteria} from './GroupeEtudiantDetailCriteria.model';
 import {TeacherLocalityCriteria} from './TeacherLocalityCriteria.model';
 import {NiveauEtudeCriteria} from './NiveauEtudeCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class EtudiantCriteria  extends BaseCriteria {
+
+export class EtudiantCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

@@ -1,9 +1,9 @@
 import {SectionCriteria} from './SectionCriteria.model';
 import {SuperCategorieSectionCriteria} from './SuperCategorieSectionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class CategorieSectionCriteria  extends BaseCriteria {
+
+export class CategorieSectionCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

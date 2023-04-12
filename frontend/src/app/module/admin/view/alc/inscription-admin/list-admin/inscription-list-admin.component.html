@@ -67,8 +67,8 @@
                             </p-dropdown>
                         </span>
                         <span class=" p-float-label mr-3 align-search-items mt-4">
-                            <p-dropdown [options]="quizNiveaus" [(ngModel)]="criteria.quizNiveau" id="10" [filter]="true"
-                                        [showClear]="true"  placeholder="{{'Quiz niveau' | translate}}" optionLabel="lib">
+                            <p-dropdown [options]="quizs" [(ngModel)]="criteria.quiz" id="10" [filter]="true"
+                                        [showClear]="true"  placeholder="{{'Quiz' | translate}}" optionLabel="lib">
                             </p-dropdown>
                         </span>
                         <span class=" p-float-label mr-3 align-search-items mt-4">
@@ -141,7 +141,7 @@
 
 
             <p-table #dt [value]="items" [columns]="cols" [rows]="8" [paginator]="false"
-                    [globalFilterFields]="['numeroInscription', 'etudiantref', 'etatInscriptionlibelle', 'parcourslibelle', 'groupeEtudelibelle', 'statutSociallibelle', 'interetEtudiantlibelle', 'niveauEtudecode', 'fonctionlibelle', 'quizNiveaulib', 'noteQuizNiveau', 'quizFinished', 'dateRegistration', 'datedebutinscription', 'datefininscription', 'packStudentlibelle', 'skilllibelle', 'skype']" [(selection)]="selections"
+                    [globalFilterFields]="['numeroInscription', 'etudiantref', 'etatInscriptionlibelle', 'parcourslibelle', 'groupeEtudelibelle', 'statutSociallibelle', 'interetEtudiantlibelle', 'niveauEtudecode', 'fonctionlibelle', 'quizlib', 'noteQuizNiveau', 'quizFinished', 'dateRegistration', 'datedebutinscription', 'datefininscription', 'packStudentlibelle', 'skilllibelle', 'skype']" [(selection)]="selections"
                     [rowHover]="true" dataKey="id" styleClass="p-datatable-customers"
                     currentPageReportTemplate="{{'Les éléments de {first} à {last} sur {totalRecords} ' | translate}}"
                     [showCurrentPageReport]="true" [rowsPerPageOptions]="[10,25,50]" selectionMode="multiple">
@@ -232,10 +232,10 @@
                         </th>
                                 
                                 <!-- 
-                        <th pSortableColumn="quizNiveau">
+                        <th pSortableColumn="quiz">
                             <div class="p-d-flex p-jc-between p-ai-center">
-                                <span>{{'Quiz niveau' | translate}}</span>
-                                <p-sortIcon field="quizNiveau"></p-sortIcon>
+                                <span>{{'Quiz' | translate}}</span>
+                                <p-sortIcon field="quiz"></p-sortIcon>
                             </div>
                         </th>
                                 --> 
@@ -341,7 +341,7 @@
                         <td>{{element.fonction?.libelle}}</td>
                             
                              <!-- 
-                        <td>{{element.quizNiveau?.lib}}</td>
+                        <td>{{element.quiz?.lib}}</td>
                              --> 
                              <!-- 
                         <td>{{element.noteQuizNiveau}}</td>

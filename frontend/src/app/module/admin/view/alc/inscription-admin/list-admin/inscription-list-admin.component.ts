@@ -53,7 +53,7 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
     interetEtudiants :Array<InteretEtudiantDto>;
     niveauEtudes :Array<NiveauEtudeDto>;
     fonctions :Array<FonctionDto>;
-    quizNiveaus :Array<QuizDto>;
+    quizs :Array<QuizDto>;
     packStudents :Array<PackStudentDto>;
     skills :Array<SkillDto>;
   
@@ -75,7 +75,7 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
       this.loadInteretEtudiant();
       this.loadNiveauEtude();
       this.loadFonction();
-      this.loadQuizNiveau();
+      this.loadQuiz();
       this.loadPackStudent();
       this.loadSkill();
     this.yesOrNoQuizFinished =  [{label: 'QuizFinished', value: null},{label: 'Oui', value: 1},{label: 'Non', value: 0}];
@@ -100,7 +100,7 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
             {field: 'interetEtudiant?.libelle', header: 'Interet etudiant'},
             {field: 'niveauEtude?.code', header: 'Niveau etude'},
             {field: 'fonction?.libelle', header: 'Fonction'},
-            {field: 'quizNiveau?.lib', header: 'Quiz niveau'},
+            {field: 'quiz?.lib', header: 'Quiz'},
             {field: 'noteQuizNiveau', header: 'Note quiz niveau'},
             {field: 'quizFinished', header: 'Quiz finished'},
             {field: 'dateRegistration', header: 'Date registration'},
@@ -161,10 +161,10 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
         isPermistted ? this.fonctionService.findAll().subscribe(fonctions => this.fonctions = fonctions,error=>console.log(error))
         : this.messageService.add({severity: 'error', summary: 'Erreur', detail: 'Problème de permission'});
     }
-    public async loadQuizNiveau(){
+    public async loadQuiz(){
         await this.roleService.findAll();
         const isPermistted = await this.roleService.isPermitted('Inscription', 'list');
-        isPermistted ? this.quizService.findAll().subscribe(quizNiveaus => this.quizNiveaus = quizNiveaus,error=>console.log(error))
+        isPermistted ? this.quizService.findAll().subscribe(quizs => this.quizs = quizs,error=>console.log(error))
         : this.messageService.add({severity: 'error', summary: 'Erreur', detail: 'Problème de permission'});
     }
     public async loadPackStudent(){
@@ -195,7 +195,7 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
                 'Interet etudiant': e.interetEtudiant?.libelle ,
                 'Niveau etude': e.niveauEtude?.code ,
                 'Fonction': e.fonction?.libelle ,
-                'Quiz niveau': e.quizNiveau?.lib ,
+                'Quiz': e.quiz?.lib ,
                  'Note quiz niveau': e.noteQuizNiveau ,
                 'Quiz finished': e.quizFinished? 'Vrai' : 'Faux' ,
                  'Date registration': e.dateRegistration ,
@@ -218,7 +218,7 @@ export class InscriptionListAdminComponent extends AbstractListController<Inscri
         //'Interet etudiant': this.criteria.interetEtudiant?.libelle ? this.criteria.interetEtudiant?.libelle : environment.emptyForExport ,
         //'Niveau etude': this.criteria.niveauEtude?.code ? this.criteria.niveauEtude?.code : environment.emptyForExport ,
         //'Fonction': this.criteria.fonction?.libelle ? this.criteria.fonction?.libelle : environment.emptyForExport ,
-        //'Quiz niveau': this.criteria.quizNiveau?.lib ? this.criteria.quizNiveau?.lib : environment.emptyForExport ,
+        //'Quiz': this.criteria.quiz?.lib ? this.criteria.quiz?.lib : environment.emptyForExport ,
             'Note quiz niveau Min': this.criteria.noteQuizNiveauMin ? this.criteria.noteQuizNiveauMin : environment.emptyForExport ,
             'Note quiz niveau Max': this.criteria.noteQuizNiveauMax ? this.criteria.noteQuizNiveauMax : environment.emptyForExport ,
             'Quiz finished': this.criteria.quizFinished ? (this.criteria.quizFinished ? environment.trueValue : environment.falseValue) : environment.emptyForExport ,

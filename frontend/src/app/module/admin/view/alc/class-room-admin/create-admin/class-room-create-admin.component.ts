@@ -13,16 +13,16 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
 import {ClassRoomCriteria} from 'src/app/controller/criteria/ClassRoomCriteria.model';
-import {EtudiantClassRoomDto} from 'src/app/controller/model/EtudiantClassRoom.model';
-import {EtudiantClassRoomService} from 'src/app/controller/service/EtudiantClassRoom.service';
 import {QuizClassRoomDto} from 'src/app/controller/model/QuizClassRoom.model';
 import {QuizClassRoomService} from 'src/app/controller/service/QuizClassRoom.service';
-import {ProfDto} from 'src/app/controller/model/Prof.model';
-import {ProfService} from 'src/app/controller/service/Prof.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {EtudiantClassRoomDto} from 'src/app/controller/model/EtudiantClassRoom.model';
+import {EtudiantClassRoomService} from 'src/app/controller/service/EtudiantClassRoom.service';
+import {ProfDto} from 'src/app/controller/model/Prof.model';
+import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
   selector: 'app-class-room-create-admin',
   templateUrl: './class-room-create-admin.component.html'
@@ -41,7 +41,7 @@ export class ClassRoomCreateAdminComponent extends AbstractCreateController<Clas
     constructor(private datePipe: DatePipe, private classRoomService: ClassRoomService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private etudiantClassRoomService: EtudiantClassRoomService, private quizClassRoomService: QuizClassRoomService, private profService: ProfService, private etudiantService: EtudiantService, private quizService: QuizService
+, private quizClassRoomService: QuizClassRoomService, private quizService: QuizService, private etudiantService: EtudiantService, private etudiantClassRoomService: EtudiantClassRoomService, private profService: ProfService
     ) {
         super(datePipe, classRoomService, messageService, confirmationService, roleService, router, stringUtilService);
     }

@@ -13,10 +13,10 @@ import {ReponseService} from 'src/app/controller/service/Reponse.service';
 import {ReponseDto} from 'src/app/controller/model/Reponse.model';
 import {ReponseCriteria} from 'src/app/controller/criteria/ReponseCriteria.model';
 
-import {QuestionDto} from 'src/app/controller/model/Question.model';
-import {QuestionService} from 'src/app/controller/service/Question.service';
 import {EtatReponseDto} from 'src/app/controller/model/EtatReponse.model';
 import {EtatReponseService} from 'src/app/controller/service/EtatReponse.service';
+import {QuestionDto} from 'src/app/controller/model/Question.model';
+import {QuestionService} from 'src/app/controller/service/Question.service';
 @Component({
   selector: 'app-reponse-view-admin',
   templateUrl: './reponse-view-admin.component.html'
@@ -27,7 +27,7 @@ export class ReponseViewAdminComponent extends AbstractViewController<ReponseDto
     constructor(private datePipe: DatePipe, private reponseService: ReponseService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private questionService: QuestionService, private etatReponseService: EtatReponseService
+, private etatReponseService: EtatReponseService, private questionService: QuestionService
     ){
         super(datePipe, reponseService, messageService, roleService, router, stringUtilService);
     }

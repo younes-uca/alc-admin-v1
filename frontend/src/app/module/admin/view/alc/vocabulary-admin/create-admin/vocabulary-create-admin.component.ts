@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {VocabularyService} from 'src/app/controller/service/Vocabulary.service';
 import {VocabularyDto} from 'src/app/controller/model/Vocabulary.model';
 import {VocabularyCriteria} from 'src/app/controller/criteria/VocabularyCriteria.model';
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
 import {VocabularyQuizDto} from 'src/app/controller/model/VocabularyQuiz.model';
 import {VocabularyQuizService} from 'src/app/controller/service/VocabularyQuiz.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
 @Component({
   selector: 'app-vocabulary-create-admin',
   templateUrl: './vocabulary-create-admin.component.html'
@@ -31,7 +31,7 @@ export class VocabularyCreateAdminComponent extends AbstractCreateController<Voc
     constructor(private datePipe: DatePipe, private vocabularyService: VocabularyService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private sectionService: SectionService, private vocabularyQuizService: VocabularyQuizService
+, private vocabularyQuizService: VocabularyQuizService, private sectionService: SectionService
     ) {
         super(datePipe, vocabularyService, messageService, confirmationService, roleService, router, stringUtilService);
     }

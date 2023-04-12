@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {SuperCategorieSectionService} from 'src/app/controller/service/SuperCategorieSection.service';
 import {SuperCategorieSectionDto} from 'src/app/controller/model/SuperCategorieSection.model';
 import {SuperCategorieSectionCriteria} from 'src/app/controller/criteria/SuperCategorieSectionCriteria.model';
-import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
-import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
 import {SectionDto} from 'src/app/controller/model/Section.model';
 import {SectionService} from 'src/app/controller/service/Section.service';
+import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
+import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
 @Component({
   selector: 'app-super-categorie-section-create-admin',
   templateUrl: './super-categorie-section-create-admin.component.html'

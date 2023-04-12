@@ -15,22 +15,22 @@ import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizCriteria} from 'src/app/controller/criteria/QuizCriteria.model';
 
 
-import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
-import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
-import {QuestionDto} from 'src/app/controller/model/Question.model';
-import {QuestionService} from 'src/app/controller/service/Question.service';
-import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
-import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {ReponseDto} from 'src/app/controller/model/Reponse.model';
 import {ReponseService} from 'src/app/controller/service/Reponse.service';
 import {QuizEtudiantDto} from 'src/app/controller/model/QuizEtudiant.model';
 import {QuizEtudiantService} from 'src/app/controller/service/QuizEtudiant.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
+import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
 import {ReponseEtudiantDto} from 'src/app/controller/model/ReponseEtudiant.model';
 import {ReponseEtudiantService} from 'src/app/controller/service/ReponseEtudiant.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
+import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
+import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
+import {QuestionDto} from 'src/app/controller/model/Question.model';
+import {QuestionService} from 'src/app/controller/service/Question.service';
 
 @Component({
   selector: 'app-quiz-edit-admin',
@@ -53,7 +53,7 @@ export class QuizEditAdminComponent extends AbstractEditController<QuizDto, Quiz
     constructor(private datePipe: DatePipe, private quizService: QuizService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private typeDeQuestionService: TypeDeQuestionService, private homeWorkService: HomeWorkService, private sectionService: SectionService, private quizEtudiantService: QuizEtudiantService, private etudiantService: EtudiantService, private questionService: QuestionService
+, private homeWorkService: HomeWorkService, private sectionService: SectionService, private quizEtudiantService: QuizEtudiantService, private etudiantService: EtudiantService, private typeDeQuestionService: TypeDeQuestionService, private questionService: QuestionService
     ) {
         super(datePipe, quizService, messageService, confirmationService, roleService, router, stringUtilService);
     }

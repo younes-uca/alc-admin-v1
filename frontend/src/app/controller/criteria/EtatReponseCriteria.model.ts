@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class EtatReponseCriteria  extends BaseCriteria {
+
+export class EtatReponseCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

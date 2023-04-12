@@ -13,26 +13,26 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {ProfService} from 'src/app/controller/service/Prof.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfCriteria} from 'src/app/controller/criteria/ProfCriteria.model';
-import {TypeTeacherDto} from 'src/app/controller/model/TypeTeacher.model';
-import {TypeTeacherService} from 'src/app/controller/service/TypeTeacher.service';
-import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
-import {ParcoursService} from 'src/app/controller/service/Parcours.service';
-import {TrancheHoraireProfDto} from 'src/app/controller/model/TrancheHoraireProf.model';
-import {TrancheHoraireProfService} from 'src/app/controller/service/TrancheHoraireProf.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
+import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {TrancheHoraireProfDto} from 'src/app/controller/model/TrancheHoraireProf.model';
+import {TrancheHoraireProfService} from 'src/app/controller/service/TrancheHoraireProf.service';
+import {TypeTeacherDto} from 'src/app/controller/model/TypeTeacher.model';
+import {TypeTeacherService} from 'src/app/controller/service/TypeTeacher.service';
 import {CategorieProfDto} from 'src/app/controller/model/CategorieProf.model';
 import {CategorieProfService} from 'src/app/controller/service/CategorieProf.service';
+import {QuizClassRoomDto} from 'src/app/controller/model/QuizClassRoom.model';
+import {QuizClassRoomService} from 'src/app/controller/service/QuizClassRoom.service';
+import {RecommendTeacherDto} from 'src/app/controller/model/RecommendTeacher.model';
+import {RecommendTeacherService} from 'src/app/controller/service/RecommendTeacher.service';
+import {ParcoursDto} from 'src/app/controller/model/Parcours.model';
+import {ParcoursService} from 'src/app/controller/service/Parcours.service';
 import {EtudiantClassRoomDto} from 'src/app/controller/model/EtudiantClassRoom.model';
 import {EtudiantClassRoomService} from 'src/app/controller/service/EtudiantClassRoom.service';
 import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
 import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
-import {RecommendTeacherDto} from 'src/app/controller/model/RecommendTeacher.model';
-import {RecommendTeacherService} from 'src/app/controller/service/RecommendTeacher.service';
-import {QuizClassRoomDto} from 'src/app/controller/model/QuizClassRoom.model';
-import {QuizClassRoomService} from 'src/app/controller/service/QuizClassRoom.service';
-import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
-import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
 @Component({
   selector: 'app-prof-create-admin',
   templateUrl: './prof-create-admin.component.html'
@@ -58,7 +58,7 @@ export class ProfCreateAdminComponent extends AbstractCreateController<ProfDto, 
     constructor(private datePipe: DatePipe, private profService: ProfService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private typeTeacherService: TypeTeacherService, private parcoursService: ParcoursService, private classRoomService: ClassRoomService, private trancheHoraireProfService: TrancheHoraireProfService, private recommendTeacherService: RecommendTeacherService, private etudiantService: EtudiantService, private quizService: QuizService, private categorieProfService: CategorieProfService
+, private categorieProfService: CategorieProfService, private trancheHoraireProfService: TrancheHoraireProfService, private quizService: QuizService, private parcoursService: ParcoursService, private typeTeacherService: TypeTeacherService, private etudiantService: EtudiantService, private recommendTeacherService: RecommendTeacherService, private classRoomService: ClassRoomService
     ) {
         super(datePipe, profService, messageService, confirmationService, roleService, router, stringUtilService);
     }

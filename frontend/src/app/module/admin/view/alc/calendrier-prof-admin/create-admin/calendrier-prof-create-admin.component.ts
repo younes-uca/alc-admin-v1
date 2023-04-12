@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {CalendrierProfService} from 'src/app/controller/service/CalendrierProf.service';
 import {CalendrierProfDto} from 'src/app/controller/model/CalendrierProf.model';
 import {CalendrierProfCriteria} from 'src/app/controller/criteria/CalendrierProfCriteria.model';
-import {ProfDto} from 'src/app/controller/model/Prof.model';
-import {ProfService} from 'src/app/controller/service/Prof.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {ProfDto} from 'src/app/controller/model/Prof.model';
+import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
   selector: 'app-calendrier-prof-create-admin',
   templateUrl: './calendrier-prof-create-admin.component.html'
@@ -32,7 +32,7 @@ export class CalendrierProfCreateAdminComponent extends AbstractCreateController
     constructor(private datePipe: DatePipe, private calendrierProfService: CalendrierProfService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private profService: ProfService, private etudiantService: EtudiantService
+, private etudiantService: EtudiantService, private profService: ProfService
     ) {
         super(datePipe, calendrierProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

@@ -15,14 +15,14 @@ import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.mod
 import {CategorieSectionCriteria} from 'src/app/controller/criteria/CategorieSectionCriteria.model';
 
 
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
-import {CoursDto} from 'src/app/controller/model/Cours.model';
-import {CoursService} from 'src/app/controller/service/Cours.service';
 import {SessionCoursDto} from 'src/app/controller/model/SessionCours.model';
 import {SessionCoursService} from 'src/app/controller/service/SessionCours.service';
 import {SectionItemDto} from 'src/app/controller/model/SectionItem.model';
 import {SectionItemService} from 'src/app/controller/service/SectionItem.service';
+import {CoursDto} from 'src/app/controller/model/Cours.model';
+import {CoursService} from 'src/app/controller/service/Cours.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
 import {SuperCategorieSectionDto} from 'src/app/controller/model/SuperCategorieSection.model';
 import {SuperCategorieSectionService} from 'src/app/controller/service/SuperCategorieSection.service';
 
@@ -45,7 +45,7 @@ export class CategorieSectionEditAdminComponent extends AbstractEditController<C
     constructor(private datePipe: DatePipe, private categorieSectionService: CategorieSectionService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private sectionService: SectionService, private coursService: CoursService, private sessionCoursService: SessionCoursService, private superCategorieSectionService: SuperCategorieSectionService
+, private coursService: CoursService, private sessionCoursService: SessionCoursService, private sectionService: SectionService, private superCategorieSectionService: SuperCategorieSectionService
     ) {
         super(datePipe, categorieSectionService, messageService, confirmationService, roleService, router, stringUtilService);
     }

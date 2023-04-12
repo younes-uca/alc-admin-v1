@@ -1,8 +1,8 @@
 import {InscriptionCriteria} from './InscriptionCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FreeTrialformuleCriteria  extends BaseCriteria {
+
+export class FreeTrialformuleCriteria  extends   BaseCriteria  {
 
     public id: number;
     public code: string;

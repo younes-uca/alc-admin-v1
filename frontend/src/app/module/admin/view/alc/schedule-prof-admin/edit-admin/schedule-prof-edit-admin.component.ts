@@ -15,10 +15,10 @@ import {ScheduleProfDto} from 'src/app/controller/model/ScheduleProf.model';
 import {ScheduleProfCriteria} from 'src/app/controller/criteria/ScheduleProfCriteria.model';
 
 
-import {GroupeEtudiantDto} from 'src/app/controller/model/GroupeEtudiant.model';
-import {GroupeEtudiantService} from 'src/app/controller/service/GroupeEtudiant.service';
 import {CoursDto} from 'src/app/controller/model/Cours.model';
 import {CoursService} from 'src/app/controller/service/Cours.service';
+import {GroupeEtudiantDto} from 'src/app/controller/model/GroupeEtudiant.model';
+import {GroupeEtudiantService} from 'src/app/controller/service/GroupeEtudiant.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfService} from 'src/app/controller/service/Prof.service';
 
@@ -39,7 +39,7 @@ export class ScheduleProfEditAdminComponent extends AbstractEditController<Sched
     constructor(private datePipe: DatePipe, private scheduleProfService: ScheduleProfService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private groupeEtudiantService: GroupeEtudiantService, private coursService: CoursService, private profService: ProfService
+, private coursService: CoursService, private groupeEtudiantService: GroupeEtudiantService, private profService: ProfService
     ) {
         super(datePipe, scheduleProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

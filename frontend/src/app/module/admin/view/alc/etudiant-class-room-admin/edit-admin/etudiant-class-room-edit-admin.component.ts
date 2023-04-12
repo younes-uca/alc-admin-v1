@@ -15,10 +15,10 @@ import {EtudiantClassRoomDto} from 'src/app/controller/model/EtudiantClassRoom.m
 import {EtudiantClassRoomCriteria} from 'src/app/controller/criteria/EtudiantClassRoomCriteria.model';
 
 
-import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
-import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
+import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 
 @Component({
   selector: 'app-etudiant-class-room-edit-admin',
@@ -36,7 +36,7 @@ export class EtudiantClassRoomEditAdminComponent extends AbstractEditController<
     constructor(private datePipe: DatePipe, private etudiantClassRoomService: EtudiantClassRoomService
         , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
         , private confirmationService: ConfirmationService, private router: Router  
-, private classRoomService: ClassRoomService, private etudiantService: EtudiantService
+, private etudiantService: EtudiantService, private classRoomService: ClassRoomService
     ) {
         super(datePipe, etudiantClassRoomService, messageService, confirmationService, roleService, router, stringUtilService);
     }

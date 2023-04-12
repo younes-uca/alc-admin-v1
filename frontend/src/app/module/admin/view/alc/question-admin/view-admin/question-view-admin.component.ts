@@ -13,14 +13,14 @@ import {QuestionService} from 'src/app/controller/service/Question.service';
 import {QuestionDto} from 'src/app/controller/model/Question.model';
 import {QuestionCriteria} from 'src/app/controller/criteria/QuestionCriteria.model';
 
-import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
-import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
 import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
 import {ReponseDto} from 'src/app/controller/model/Reponse.model';
 import {ReponseService} from 'src/app/controller/service/Reponse.service';
 import {QuizDto} from 'src/app/controller/model/Quiz.model';
 import {QuizService} from 'src/app/controller/service/Quiz.service';
+import {TypeDeQuestionDto} from 'src/app/controller/model/TypeDeQuestion.model';
+import {TypeDeQuestionService} from 'src/app/controller/service/TypeDeQuestion.service';
 import {EtatReponseDto} from 'src/app/controller/model/EtatReponse.model';
 import {EtatReponseService} from 'src/app/controller/service/EtatReponse.service';
 @Component({
@@ -35,7 +35,7 @@ export class QuestionViewAdminComponent extends AbstractViewController<QuestionD
     constructor(private datePipe: DatePipe, private questionService: QuestionService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private typeDeQuestionService: TypeDeQuestionService, private homeWorkService: HomeWorkService, private reponseService: ReponseService, private quizService: QuizService, private etatReponseService: EtatReponseService
+, private homeWorkService: HomeWorkService, private reponseService: ReponseService, private quizService: QuizService, private typeDeQuestionService: TypeDeQuestionService, private etatReponseService: EtatReponseService
     ){
         super(datePipe, questionService, messageService, roleService, router, stringUtilService);
     }

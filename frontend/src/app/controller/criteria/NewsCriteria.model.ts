@@ -1,7 +1,7 @@
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class NewsCriteria  extends BaseCriteria {
+
+export class NewsCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

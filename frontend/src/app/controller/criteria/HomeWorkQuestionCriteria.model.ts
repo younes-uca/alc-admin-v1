@@ -1,10 +1,10 @@
 import {HoweWorkQSTReponseCriteria} from './HoweWorkQSTReponseCriteria.model';
 import {TypeDeQuestionCriteria} from './TypeDeQuestionCriteria.model';
 import {HomeWorkCriteria} from './HomeWorkCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class HomeWorkQuestionCriteria  extends BaseCriteria {
+
+export class HomeWorkQuestionCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

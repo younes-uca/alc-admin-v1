@@ -1,8 +1,8 @@
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class RecommendTeacherCriteria  extends BaseCriteria {
+
+export class RecommendTeacherCriteria  extends   BaseCriteria  {
 
     public id: number;
     public ref: string;

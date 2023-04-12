@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {WorkloadBonusProfService} from 'src/app/controller/service/WorkloadBonusProf.service';
 import {WorkloadBonusProfDto} from 'src/app/controller/model/WorkloadBonusProf.model';
 import {WorkloadBonusProfCriteria} from 'src/app/controller/criteria/WorkloadBonusProfCriteria.model';
-import {WorkloadBonusDto} from 'src/app/controller/model/WorkloadBonus.model';
-import {WorkloadBonusService} from 'src/app/controller/service/WorkloadBonus.service';
 import {SalaryDto} from 'src/app/controller/model/Salary.model';
 import {SalaryService} from 'src/app/controller/service/Salary.service';
+import {WorkloadBonusDto} from 'src/app/controller/model/WorkloadBonus.model';
+import {WorkloadBonusService} from 'src/app/controller/service/WorkloadBonus.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
@@ -34,7 +34,7 @@ export class WorkloadBonusProfCreateAdminComponent extends AbstractCreateControl
     constructor(private datePipe: DatePipe, private workloadBonusProfService: WorkloadBonusProfService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private workloadBonusService: WorkloadBonusService, private salaryService: SalaryService, private profService: ProfService
+, private salaryService: SalaryService, private workloadBonusService: WorkloadBonusService, private profService: ProfService
     ) {
         super(datePipe, workloadBonusProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

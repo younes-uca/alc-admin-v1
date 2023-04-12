@@ -15,16 +15,16 @@ import {HomeWorkEtudiantCriteria} from 'src/app/controller/criteria/HomeWorkEtud
 
 import {HomeWorkDto} from 'src/app/controller/model/HomeWork.model';
 import {HomeWorkService} from 'src/app/controller/service/HomeWork.service';
+import {ResultatHomeWorkDto} from 'src/app/controller/model/ResultatHomeWork.model';
+import {ResultatHomeWorkService} from 'src/app/controller/service/ResultatHomeWork.service';
+import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
+import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
 import {HoweWorkQSTReponseDto} from 'src/app/controller/model/HoweWorkQSTReponse.model';
 import {HoweWorkQSTReponseService} from 'src/app/controller/service/HoweWorkQSTReponse.service';
 import {ReponseEtudiantHomeWorkDto} from 'src/app/controller/model/ReponseEtudiantHomeWork.model';
 import {ReponseEtudiantHomeWorkService} from 'src/app/controller/service/ReponseEtudiantHomeWork.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
-import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
-import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
-import {ResultatHomeWorkDto} from 'src/app/controller/model/ResultatHomeWork.model';
-import {ResultatHomeWorkService} from 'src/app/controller/service/ResultatHomeWork.service';
 @Component({
   selector: 'app-home-work-etudiant-view-admin',
   templateUrl: './home-work-etudiant-view-admin.component.html'
@@ -37,7 +37,7 @@ export class HomeWorkEtudiantViewAdminComponent extends AbstractViewController<H
     constructor(private datePipe: DatePipe, private homeWorkEtudiantService: HomeWorkEtudiantService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private homeWorkService: HomeWorkService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private reponseEtudiantHomeWorkService: ReponseEtudiantHomeWorkService, private etudiantService: EtudiantService, private homeWorkQuestionService: HomeWorkQuestionService, private resultatHomeWorkService: ResultatHomeWorkService
+, private homeWorkService: HomeWorkService, private resultatHomeWorkService: ResultatHomeWorkService, private homeWorkQuestionService: HomeWorkQuestionService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private reponseEtudiantHomeWorkService: ReponseEtudiantHomeWorkService, private etudiantService: EtudiantService
     ){
         super(datePipe, homeWorkEtudiantService, messageService, roleService, router, stringUtilService);
     }

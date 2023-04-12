@@ -13,20 +13,20 @@ import {SessionCoursService} from 'src/app/controller/service/SessionCours.servi
 import {SessionCoursDto} from 'src/app/controller/model/SessionCours.model';
 import {SessionCoursCriteria} from 'src/app/controller/criteria/SessionCoursCriteria.model';
 
-import {SectionDto} from 'src/app/controller/model/Section.model';
-import {SectionService} from 'src/app/controller/service/Section.service';
 import {SalaryDto} from 'src/app/controller/model/Salary.model';
 import {SalaryService} from 'src/app/controller/service/Salary.service';
-import {CoursDto} from 'src/app/controller/model/Cours.model';
-import {CoursService} from 'src/app/controller/service/Cours.service';
-import {ProfDto} from 'src/app/controller/model/Prof.model';
-import {ProfService} from 'src/app/controller/service/Prof.service';
-import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
-import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
 import {GroupeEtudiantDto} from 'src/app/controller/model/GroupeEtudiant.model';
 import {GroupeEtudiantService} from 'src/app/controller/service/GroupeEtudiant.service';
 import {SectionItemDto} from 'src/app/controller/model/SectionItem.model';
 import {SectionItemService} from 'src/app/controller/service/SectionItem.service';
+import {CoursDto} from 'src/app/controller/model/Cours.model';
+import {CoursService} from 'src/app/controller/service/Cours.service';
+import {SectionDto} from 'src/app/controller/model/Section.model';
+import {SectionService} from 'src/app/controller/service/Section.service';
+import {CategorieSectionDto} from 'src/app/controller/model/CategorieSection.model';
+import {CategorieSectionService} from 'src/app/controller/service/CategorieSection.service';
+import {ProfDto} from 'src/app/controller/model/Prof.model';
+import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
   selector: 'app-session-cours-view-admin',
   templateUrl: './session-cours-view-admin.component.html'
@@ -39,7 +39,7 @@ export class SessionCoursViewAdminComponent extends AbstractViewController<Sessi
     constructor(private datePipe: DatePipe, private sessionCoursService: SessionCoursService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private categorieSectionService: CategorieSectionService, private groupeEtudiantService: GroupeEtudiantService, private sectionService: SectionService, private salaryService: SalaryService, private coursService: CoursService, private profService: ProfService
+, private coursService: CoursService, private salaryService: SalaryService, private sectionService: SectionService, private groupeEtudiantService: GroupeEtudiantService, private categorieSectionService: CategorieSectionService, private profService: ProfService
     ){
         super(datePipe, sessionCoursService, messageService, roleService, router, stringUtilService);
     }

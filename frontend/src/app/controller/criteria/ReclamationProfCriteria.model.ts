@@ -1,10 +1,10 @@
 import {TypeReclamationProfCriteria} from './TypeReclamationProfCriteria.model';
 import {AdminCriteria} from './AdminCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ReclamationProfCriteria  extends BaseCriteria {
+
+export class ReclamationProfCriteria  extends   BaseCriteria  {
 
     public id: number;
     public reference: string;

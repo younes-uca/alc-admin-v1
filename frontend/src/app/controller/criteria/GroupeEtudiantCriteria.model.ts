@@ -2,10 +2,10 @@ import {ParcoursCriteria} from './ParcoursCriteria.model';
 import {GroupeEtudiantDetailCriteria} from './GroupeEtudiantDetailCriteria.model';
 import {GroupeEtudeCriteria} from './GroupeEtudeCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class GroupeEtudiantCriteria  extends BaseCriteria {
+
+export class GroupeEtudiantCriteria  extends   BaseCriteria  {
 
     public id: number;
     public libelle: string;

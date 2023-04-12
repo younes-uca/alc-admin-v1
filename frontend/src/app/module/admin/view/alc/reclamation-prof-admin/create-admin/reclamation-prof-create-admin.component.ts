@@ -13,10 +13,10 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {ReclamationProfService} from 'src/app/controller/service/ReclamationProf.service';
 import {ReclamationProfDto} from 'src/app/controller/model/ReclamationProf.model';
 import {ReclamationProfCriteria} from 'src/app/controller/criteria/ReclamationProfCriteria.model';
-import {AdminDto} from 'src/app/controller/model/Admin.model';
-import {AdminService} from 'src/app/controller/service/Admin.service';
 import {TypeReclamationProfDto} from 'src/app/controller/model/TypeReclamationProf.model';
 import {TypeReclamationProfService} from 'src/app/controller/service/TypeReclamationProf.service';
+import {AdminDto} from 'src/app/controller/model/Admin.model';
+import {AdminService} from 'src/app/controller/service/Admin.service';
 import {ProfDto} from 'src/app/controller/model/Prof.model';
 import {ProfService} from 'src/app/controller/service/Prof.service';
 @Component({
@@ -35,7 +35,7 @@ export class ReclamationProfCreateAdminComponent extends AbstractCreateControlle
     constructor(private datePipe: DatePipe, private reclamationProfService: ReclamationProfService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private adminService: AdminService, private typeReclamationProfService: TypeReclamationProfService, private profService: ProfService
+, private typeReclamationProfService: TypeReclamationProfService, private adminService: AdminService, private profService: ProfService
     ) {
         super(datePipe, reclamationProfService, messageService, confirmationService, roleService, router, stringUtilService);
     }

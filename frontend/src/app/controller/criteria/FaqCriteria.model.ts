@@ -1,8 +1,8 @@
 import {FaqTypeCriteria} from './FaqTypeCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FaqCriteria  extends BaseCriteria {
+
+export class FaqCriteria  extends   BaseCriteria  {
 
     public id: number;
     public description: string;

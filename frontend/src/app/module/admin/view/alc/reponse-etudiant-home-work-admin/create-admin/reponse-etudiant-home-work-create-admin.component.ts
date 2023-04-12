@@ -13,12 +13,12 @@ import { AbstractCreateController } from 'src/app/zynerator/controller/AbstractC
 import {ReponseEtudiantHomeWorkService} from 'src/app/controller/service/ReponseEtudiantHomeWork.service';
 import {ReponseEtudiantHomeWorkDto} from 'src/app/controller/model/ReponseEtudiantHomeWork.model';
 import {ReponseEtudiantHomeWorkCriteria} from 'src/app/controller/criteria/ReponseEtudiantHomeWorkCriteria.model';
-import {HomeWorkEtudiantDto} from 'src/app/controller/model/HomeWorkEtudiant.model';
-import {HomeWorkEtudiantService} from 'src/app/controller/service/HomeWorkEtudiant.service';
-import {HoweWorkQSTReponseDto} from 'src/app/controller/model/HoweWorkQSTReponse.model';
-import {HoweWorkQSTReponseService} from 'src/app/controller/service/HoweWorkQSTReponse.service';
 import {HomeWorkQuestionDto} from 'src/app/controller/model/HomeWorkQuestion.model';
 import {HomeWorkQuestionService} from 'src/app/controller/service/HomeWorkQuestion.service';
+import {HoweWorkQSTReponseDto} from 'src/app/controller/model/HoweWorkQSTReponse.model';
+import {HoweWorkQSTReponseService} from 'src/app/controller/service/HoweWorkQSTReponse.service';
+import {HomeWorkEtudiantDto} from 'src/app/controller/model/HomeWorkEtudiant.model';
+import {HomeWorkEtudiantService} from 'src/app/controller/service/HomeWorkEtudiant.service';
 @Component({
   selector: 'app-reponse-etudiant-home-work-create-admin',
   templateUrl: './reponse-etudiant-home-work-create-admin.component.html'
@@ -35,7 +35,7 @@ export class ReponseEtudiantHomeWorkCreateAdminComponent extends AbstractCreateC
     constructor(private datePipe: DatePipe, private reponseEtudiantHomeWorkService: ReponseEtudiantHomeWorkService
      , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
     , private confirmationService: ConfirmationService, private router: Router  
-, private homeWorkEtudiantService: HomeWorkEtudiantService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private homeWorkQuestionService: HomeWorkQuestionService
+, private homeWorkQuestionService: HomeWorkQuestionService, private howeWorkQSTReponseService: HoweWorkQSTReponseService, private homeWorkEtudiantService: HomeWorkEtudiantService
     ) {
         super(datePipe, reponseEtudiantHomeWorkService, messageService, confirmationService, roleService, router, stringUtilService);
     }

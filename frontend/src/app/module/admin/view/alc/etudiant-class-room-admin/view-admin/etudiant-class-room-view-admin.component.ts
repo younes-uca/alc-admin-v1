@@ -13,10 +13,10 @@ import {EtudiantClassRoomService} from 'src/app/controller/service/EtudiantClass
 import {EtudiantClassRoomDto} from 'src/app/controller/model/EtudiantClassRoom.model';
 import {EtudiantClassRoomCriteria} from 'src/app/controller/criteria/EtudiantClassRoomCriteria.model';
 
-import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
-import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 import {EtudiantDto} from 'src/app/controller/model/Etudiant.model';
 import {EtudiantService} from 'src/app/controller/service/Etudiant.service';
+import {ClassRoomDto} from 'src/app/controller/model/ClassRoom.model';
+import {ClassRoomService} from 'src/app/controller/service/ClassRoom.service';
 @Component({
   selector: 'app-etudiant-class-room-view-admin',
   templateUrl: './etudiant-class-room-view-admin.component.html'
@@ -27,7 +27,7 @@ export class EtudiantClassRoomViewAdminComponent extends AbstractViewController<
     constructor(private datePipe: DatePipe, private etudiantClassRoomService: EtudiantClassRoomService
                 , private stringUtilService: StringUtilService, private roleService: RoleService,  private messageService: MessageService
                 , private router: Router  
-, private classRoomService: ClassRoomService, private etudiantService: EtudiantService
+, private etudiantService: EtudiantService, private classRoomService: ClassRoomService
     ){
         super(datePipe, etudiantClassRoomService, messageService, roleService, router, stringUtilService);
     }

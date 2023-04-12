@@ -110,9 +110,9 @@
                                         </div>
 
                                     <div class="field col-11 md:col-2">
-                                            <label for="10">{{'inscriptionQuizNiveau' | translate}}</label>
-                                            <p-dropdown   appendTo="body" [options]="quizNiveaus" [(ngModel)]="item.quizNiveau" id="10"[filter]="true" filterMatchMode="contains"
-                                                    [showClear]="true" optionLabel="lib" placeholder="{{'inscriptionQuizNiveau' | translate}}"  >
+                                            <label for="10">{{'inscriptionQuiz' | translate}}</label>
+                                            <p-dropdown   appendTo="body" [options]="quizs" [(ngModel)]="item.quiz" id="10"[filter]="true" filterMatchMode="contains"
+                                                    [showClear]="true" optionLabel="lib" placeholder="{{'inscriptionQuiz' | translate}}"  >
                                             </p-dropdown>
                                             
                                         </div>
@@ -219,7 +219,7 @@
                     <app-interet-etudiant-create-admin></app-interet-etudiant-create-admin>
                     <app-niveau-etude-create-admin></app-niveau-etude-create-admin>
                     <app-fonction-create-admin></app-fonction-create-admin>
-                    <app-quiz-niveau-create-admin></app-quiz-niveau-create-admin>
+                    <app-quiz-create-admin></app-quiz-create-admin>
                     <app-pack-student-create-admin></app-pack-student-create-admin>
                     <app-skill-create-admin></app-skill-create-admin>
 

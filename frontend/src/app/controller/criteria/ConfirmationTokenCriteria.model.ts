@@ -1,8 +1,8 @@
 import {EtudiantCriteria} from './EtudiantCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class ConfirmationTokenCriteria  extends BaseCriteria {
+
+export class ConfirmationTokenCriteria  extends   BaseCriteria  {
 
     public id: number;
     public token: string;

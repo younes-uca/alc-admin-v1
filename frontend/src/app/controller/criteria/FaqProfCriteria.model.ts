@@ -1,10 +1,10 @@
 import {FaqTypeCriteria} from './FaqTypeCriteria.model';
 import {AdminCriteria} from './AdminCriteria.model';
 import {ProfCriteria} from './ProfCriteria.model';
-
 import {BaseCriteria} from 'src/app/zynerator/criteria/BaseCriteria.model';
 
-export class FaqProfCriteria  extends BaseCriteria {
+
+export class FaqProfCriteria  extends   BaseCriteria  {
 
     public id: number;
     public description: string;
