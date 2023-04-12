@@ -26,7 +26,7 @@ AdminHistoryDao> implements AdminAdminService {
 
 
 
-    Admin findByUsername(String username){
+    public Admin findByUsername(String username){
         return dao.findByUsername(username);
     }
     public void configure() {

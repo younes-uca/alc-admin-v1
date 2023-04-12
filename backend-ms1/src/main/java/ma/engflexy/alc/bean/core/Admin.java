@@ -1,5 +1,6 @@
 package ma.engflexy.alc.bean.core;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 
@@ -42,10 +43,10 @@ public class Admin  extends User    {
     private boolean passwordChanged = false;
     @JsonFormat(pattern="yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
-    private Date createdAt ;
+    private LocalDateTime createdAt ;
     @JsonFormat(pattern="yyyy-MM-dd")
     @Temporal(TemporalType.DATE)
-    private Date updatedAt ;
+    private LocalDateTime updatedAt ;
     @Column(length = 500)
     private String username;
     @Column(length = 500)
@@ -109,16 +110,16 @@ public class Admin  extends User    {
     public void setPasswordChanged(boolean passwordChanged){
         this.passwordChanged = passwordChanged;
     }
-    public Date getCreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return this.createdAt;
     }
-    public void setCreatedAt(Date createdAt){
+    public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt = createdAt;
     }
-    public Date getUpdatedAt(){
+    public LocalDateTime getUpdatedAt(){
         return this.updatedAt;
     }
-    public void setUpdatedAt(Date updatedAt){
+    public void setUpdatedAt(LocalDateTime updatedAt){
         this.updatedAt = updatedAt;
     }
     public String getUsername(){

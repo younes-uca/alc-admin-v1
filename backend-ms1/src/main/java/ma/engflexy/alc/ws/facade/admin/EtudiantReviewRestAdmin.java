@@ -56,30 +56,10 @@ public class EtudiantReviewRestAdmin  extends AbstractController<EtudiantReview,
     public ResponseEntity<EtudiantReviewDto> update(@RequestBody EtudiantReviewDto dto) throws Exception {
         return super.update(dto);
     }
-    @ApiOperation("Finds a etudiantReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<EtudiantReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
-    @ApiOperation("Finds a etudiantReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<EtudiantReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
-    @ApiOperation("Finds a etudiantReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<EtudiantReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
     @ApiOperation("Saves the specified  etudiantReview")
     @PostMapping("")
     public ResponseEntity<EtudiantReviewDto> save(@RequestBody EtudiantReviewDto dto) throws Exception {
         return super.save(dto);
-    }
-    @ApiOperation("Finds a etudiantReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<EtudiantReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
     }
     @ApiOperation("Delete list of etudiantReview")
     @PostMapping("multiple")
