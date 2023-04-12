@@ -1,0 +1,10 @@
+package ma.engflexy.alc.dao.facade.history;
+
+import ma.engflexy.alc.zynerator.repository.AbstractHistoryRepository;
+import ma.engflexy.alc.bean.history.SuperCategorieSectionHistory;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface SuperCategorieSectionHistoryDao extends AbstractHistoryRepository<SuperCategorieSectionHistory,Long> {
+
+}
