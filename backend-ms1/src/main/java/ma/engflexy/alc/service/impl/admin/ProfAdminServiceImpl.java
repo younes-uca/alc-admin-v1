@@ -116,7 +116,7 @@ ProfHistoryDao> implements ProfAdminService {
         return dao.deleteByTypeTeacherId(id);
     }
 
-    Prof findByUsername(String username){
+    public Prof findByUsername(String username){
         return dao.findByUsername(username);
     }
     public void configure() {

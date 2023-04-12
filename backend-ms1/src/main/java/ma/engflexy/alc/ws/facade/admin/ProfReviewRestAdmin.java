@@ -46,40 +46,17 @@ public class ProfReviewRestAdmin  extends AbstractController<ProfReview, ProfRev
     public ResponseEntity<List<ProfReviewDto>> findAll() throws Exception {
         return super.findAll();
     }
-    @ApiOperation("Finds a profReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<ProfReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
+
     @ApiOperation("Updates the specified  profReview")
     @PutMapping("")
     public ResponseEntity<ProfReviewDto> update(@RequestBody ProfReviewDto dto) throws Exception {
         return super.update(dto);
     }
-    @ApiOperation("Finds a profReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<ProfReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
-    @ApiOperation("Finds a profReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<ProfReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
-    @ApiOperation("Finds a profReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<ProfReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
+
     @ApiOperation("Saves the specified  profReview")
     @PostMapping("")
     public ResponseEntity<ProfReviewDto> save(@RequestBody ProfReviewDto dto) throws Exception {
         return super.save(dto);
-    }
-    @ApiOperation("Finds a profReview by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<ProfReviewDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
     }
     @ApiOperation("Delete list of profReview")
     @PostMapping("multiple")

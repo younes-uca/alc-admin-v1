@@ -4,6 +4,7 @@ import ma.engflexy.alc.zynerator.audit.Log;
 import ma.engflexy.alc.zynerator.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,8 +20,8 @@ public class AdminDto  extends AuditBaseDto {
     private Boolean accountNonExpired  ;
     private Boolean accountNonLocked  ;
     private Boolean passwordChanged  ;
-    private String createdAt ;
-    private String updatedAt ;
+    private LocalDateTime createdAt ;
+    private LocalDateTime updatedAt ;
     private String username  ;
     private String password  ;
     private String prenom  ;
@@ -85,19 +86,19 @@ public class AdminDto  extends AuditBaseDto {
 
     @Log
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
-    public String getCreatedAt(){
+    public LocalDateTime getCreatedAt(){
         return this.createdAt;
     }
-    public void setCreatedAt(String createdAt){
+    public void setCreatedAt(LocalDateTime createdAt){
         this.createdAt = createdAt;
     }
 
     @Log
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy HH:mm")
-    public String getUpdatedAt(){
+    public LocalDateTime getUpdatedAt(){
         return this.updatedAt;
     }
-    public void setUpdatedAt(String updatedAt){
+    public void setUpdatedAt(LocalDateTime updatedAt){
         this.updatedAt = updatedAt;
     }
 

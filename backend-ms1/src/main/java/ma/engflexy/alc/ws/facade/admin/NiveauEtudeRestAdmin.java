@@ -82,42 +82,6 @@ public class NiveauEtudeRestAdmin  extends AbstractController<NiveauEtude, Nivea
     public ResponseEntity<List<Long>> deleteByIdIn(@RequestBody List<Long> ids) throws Exception {
             return super.deleteByIdIn(ids);
      }
-    @ApiOperation("Updates the specified  niveauEtude")
-    @PutMapping("")
-    public ResponseEntity<NiveauEtudeDto> update(@RequestBody NiveauEtudeDto dto) throws Exception {
-        return super.update(dto);
-    }
-    @ApiOperation("Finds a niveauEtude by id")
-    @GetMapping("id/{id}")
-    public ResponseEntity<NiveauEtudeDto> findById(@PathVariable Long id, String[] includes, String[] excludes) throws Exception {
-        return super.findById(id, includes, excludes);
-    }
-    @ApiOperation("Saves the specified  niveauEtude")
-    @PostMapping("")
-    public ResponseEntity<NiveauEtudeDto> save(@RequestBody NiveauEtudeDto dto) throws Exception {
-        return super.save(dto);
-    }
-    @ApiOperation("Delete list of niveauEtude")
-    @PostMapping("multiple")
-    public ResponseEntity<List<NiveauEtudeDto>> delete(@RequestBody List<NiveauEtudeDto> listToDelete) throws Exception {
-        return super.delete(listToDelete);
-    }
-    @ApiOperation("Delete the specified niveauEtude")
-    @DeleteMapping("")
-    public ResponseEntity<NiveauEtudeDto> delete(@RequestBody NiveauEtudeDto dto) throws Exception {
-            return super.delete(dto);
-    }
-
-    @ApiOperation("Delete the specified niveauEtude")
-    @DeleteMapping("id/{id}")
-    public ResponseEntity<Long> deleteById(@PathVariable Long id) throws Exception {
-        return super.deleteById(id);
-    }
-    @ApiOperation("Delete multiple niveauEtudes by ids")
-    @DeleteMapping("multiple/id")
-    public ResponseEntity<List<Long>> deleteByIdIn(@RequestBody List<Long> ids) throws Exception {
-            return super.deleteByIdIn(ids);
-     }
     @ApiOperation("Finds niveauEtudes by criteria")
     @PostMapping("find-by-criteria")
     public ResponseEntity<List<NiveauEtudeDto>> findByCriteria(@RequestBody NiveauEtudeCriteria criteria) throws Exception {
