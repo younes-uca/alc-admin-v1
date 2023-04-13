@@ -44,7 +44,7 @@ export class UserService {
         });
     }
 
-    public delete(id: string) {
+    public delete(id: number) { //it was string --
         this.http.delete<number>(this.API + "id/" + id).subscribe(res => {
             res == 1 ? this._users = this._users.filter(user => user.id != id) : false;
         })

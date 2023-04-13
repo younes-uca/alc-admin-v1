@@ -41,4 +41,8 @@ export class ProfCriteria  extends    User {
       public classRooms: Array<ClassRoomCriteria>;
       public recommendTeachers: Array<RecommendTeacherCriteria>;
 
+      //last added
+    public maxResults: number;
+    public page: number;
+
 }

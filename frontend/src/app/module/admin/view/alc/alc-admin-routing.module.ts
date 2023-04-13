@@ -19,7 +19,6 @@ import { ServicesListAdminComponent } from './services-admin/list-admin/services
 import { CategorieProfListAdminComponent } from './categorie-prof-admin/list-admin/categorie-prof-list-admin.component';
 import { ClassRoomListAdminComponent } from './class-room-admin/list-admin/class-room-list-admin.component';
 import { ParcoursListAdminComponent } from './parcours-admin/list-admin/parcours-list-admin.component';
-import { NiveauEtudeListAdminComponent } from './niveau-etude-admin/list-admin/niveau-etude-list-admin.component';
 import { SessionCoursListAdminComponent } from './session-cours-admin/list-admin/session-cours-list-admin.component';
 import { InscriptionListAdminComponent } from './inscription-admin/list-admin/inscription-list-admin.component';
 import { EtatInscriptionListAdminComponent } from './etat-inscription-admin/list-admin/etat-inscription-list-admin.component';

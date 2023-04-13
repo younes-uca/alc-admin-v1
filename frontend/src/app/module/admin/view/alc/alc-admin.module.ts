@@ -66,10 +66,6 @@ import { ParcoursCreateAdminComponent } from './parcours-admin/create-admin/parc
 import { ParcoursEditAdminComponent } from './parcours-admin/edit-admin/parcours-edit-admin.component';
 import { ParcoursViewAdminComponent } from './parcours-admin/view-admin/parcours-view-admin.component';
 import { ParcoursListAdminComponent } from './parcours-admin/list-admin/parcours-list-admin.component';
-import { NiveauEtudeCreateAdminComponent } from './niveau-etude-admin/create-admin/niveau-etude-create-admin.component';
-import { NiveauEtudeEditAdminComponent } from './niveau-etude-admin/edit-admin/niveau-etude-edit-admin.component';
-import { NiveauEtudeViewAdminComponent } from './niveau-etude-admin/view-admin/niveau-etude-view-admin.component';
-import { NiveauEtudeListAdminComponent } from './niveau-etude-admin/list-admin/niveau-etude-list-admin.component';
 import { SessionCoursCreateAdminComponent } from './session-cours-admin/create-admin/session-cours-create-admin.component';
 import { SessionCoursEditAdminComponent } from './session-cours-admin/edit-admin/session-cours-edit-admin.component';
 import { SessionCoursViewAdminComponent } from './session-cours-admin/view-admin/session-cours-view-admin.component';

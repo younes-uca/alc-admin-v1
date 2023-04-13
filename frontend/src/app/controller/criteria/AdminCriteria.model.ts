@@ -25,4 +25,8 @@ export class AdminCriteria  extends    User {
     public nom: string;
     public nomLike: string;
 
+    // last added
+    public maxResults: number;
+    public page: number;
+
 }
